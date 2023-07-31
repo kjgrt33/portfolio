@@ -109,19 +109,20 @@ header .login ul li img {
 }
 
 /* visual */
+
 .visual > ul > li {
   width: 1920px;
-  height: 1280px;
+  height: 1080px;
   animation: visual 7s infinite;
 }
 @keyframes visual {
   0% {
-    background: url(../images/visual01.jpg);
+    background: url(../images/visual01.jpg) no-repeat;
   }
   50% {
-    background: url(../images/visual02.jpg);
+    background: url(../images/visual02.jpg) no-repeat;
   }
   100% {
-    background: url(../images/visual03.jpg);
+    background: url(../images/visual03.jpg) no-repeat;
   }
 }
