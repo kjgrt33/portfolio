@@ -8,16 +8,120 @@ ul {
 }
 a {
   text-decoration: none;
-  color: #333;
 }
+@font-face {
+  font-family: SDGothic;
+  src: url(../webfonts/AppleSDGothicNeoR.woff) format("woff");
+}
+body {
+  font-family: SDGothic, sans-serif;
+}
+
+/* top */
 .top {
   display: flex;
   justify-content: flex-end;
-  margin-right: 80px;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
 }
 .top ul {
-  width: 10%;
+  display: flex;
+}
+.top ul li {
+  margin-left: 8px;
+}
+.top ul li a {
+  font-size: 13px;
+  color: #888;
+}
+.top ul li:first-child a {
+  color: #222;
+  font-weight: 600;
+}
+.top ul li a:after {
+  content: "·";
+  margin-left: 5px;
+  font-weight: 600;
+}
+.top ul li:last-child a:after {
+  content: "";
+}
+.top ul:after {
+  content: "|";
+  color: #d1d1d1;
+  margin: 2px 0 0 18px;
+}
+.top p {
+  line-height: 43px;
+  margin-right: 80px;
+}
+.top p a {
+  color: #222;
+  font-size: 13px;
+}
+.top p a::before {
+  content: url(../images/gnb_ico_ssgcom.png);
+  margin: 0 5px 0 20px;
+  position: relative;
+  top: 1px;
+}
+
+/* header */
+header {
   display: flex;
   justify-content: space-between;
-  margin-right: 20px;
+  align-items: center;
+  margin: 20px 80px;
+}
+header nav {
+  width: 40%;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul li a {
+  color: #444;
+}
+header .login ul {
+  display: flex;
+}
+header .login ul li {
+  margin-left: 20px;
+}
+header .login ul li a {
+  color: #222;
+  font-size: 13px;
+}
+header .login ul li:first-child a::before {
+  content: url(../images/gnb_ico_login.png);
+  margin-right: 8px;
+}
+header .login ul li:first-child a:after {
+  content: "|";
+  color: #d1d1d1;
+  margin-left: 18px;
+}
+header .login ul li img {
+  position: relative;
+  top: 2px;
+  left: -2px;
+}
+
+/* visual */
+.visual > ul > li {
+  width: 1920px;
+  height: 1280px;
+  animation: visual 7s infinite;
+}
+@keyframes visual {
+  0% {
+    background: url(../images/visual01.jpg);
+  }
+  50% {
+    background: url(../images/visual02.jpg);
+  }
+  100% {
+    background: url(../images/visual03.jpg);
+  }
 }
