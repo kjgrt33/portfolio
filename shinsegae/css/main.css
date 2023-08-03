@@ -494,3 +494,8 @@ header .login ul li img {
   font-weight: 400;
   text-align: center;
 }
+.now .n_con ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0;
+}
