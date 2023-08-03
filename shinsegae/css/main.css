@@ -110,10 +110,16 @@ header .login ul li img {
 
 /* visual */
 .visual {
+  position: relative;
+}
+.visual .pics li:first-child {
   height: 1080px;
   background: url(../images/visual01.jpg) no-repeat;
 }
 .slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 50%;
   height: 80%;
   display: flex;
@@ -222,7 +228,7 @@ header .login ul li img {
   width: 7px;
   height: 10px;
 }
-.slogan .text {
+.slogan .txt {
   font-family: "Cormorant Garamond", serif;
   font-size: 80px;
   color: #fff;
@@ -343,7 +349,7 @@ header .login ul li img {
   justify-content: space-between;
   align-items: center;
 }
-.news .title .login {
+.news .title .login_icon {
   margin: 20px 0;
 }
 .news .title h2 {
@@ -352,16 +358,29 @@ header .login ul li img {
   color: #222;
   font-weight: 400;
 }
-.news .title p .point_b {
+.news .title .txt .point_b {
   color: #222;
 }
-.news .title p span {
+.news .title .txt {
   color: #666;
 }
-.news .title p span a {
+.news .title .txt a {
+  position: relative;
   color: #8b714c;
-  text-decoration: underline;
-  text-underline-offset: 5px;
+}
+.news .title .txt a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #8b714c;
+  transform: scaleX(1);
+  transition: 0.5s;
+}
+.news .title .txt a:hover:after {
+  transform: scaleX(1.2);
 }
 .news .content ul {
   display: flex;
@@ -434,7 +453,7 @@ header .login ul li img {
 }
 .btn_more .line {
   position: absolute;
-  background: rgb(242, 44, 45);
+  background: #f22c2d;
 }
 .btn_more .line-bottom {
   width: 100%;
@@ -504,4 +523,182 @@ header .login ul li img {
   display: flex;
   justify-content: space-between;
   margin: 70px 0;
+}
+.now .content ul li {
+  position: relative;
+  overflow: hidden;
+}
+.now .content .col .txt {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 2px solid #f22c2d;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.3s;
+}
+.now .content .col:hover .txt {
+  opacity: 1;
+  height: 200px;
+}
+.now .content .col .txt p:first-child {
+  color: #bea36b;
+  font-size: 15px;
+}
+.now .content .col .txt p:first-child:after {
+  content: url(../images/ico_hotnew_link.png);
+  margin-left: 10px;
+}
+.now .content .col .txt p:nth-child(2) {
+  color: #fff;
+  font-size: 19px;
+  line-height: 28px;
+  margin: 10px 0;
+}
+.now .content .col .txt p:nth-child(3) {
+  position: relative;
+  color: #bbb;
+  font-size: 15px;
+}
+.now .content .col .txt p:nth-child(3):after {
+  position: absolute;
+  bottom: 1px;
+  content: url(../images/ico_hotnew_more.png);
+  margin-left: 7px;
+}
+.now .channer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.now .channer h4 a {
+  color: #444;
+  font-size: 18px;
+}
+.now .channer h4 a:after {
+  content: url(../images/ico_channel_off.png);
+  margin-left: 7px;
+}
+.now .channer h4 a:hover:after {
+  content: url(../images/ico_channel_on.png);
+}
+.now .channer p {
+  color: #666;
+  font-size: 15px;
+  margin: 10px 0;
+}
+.now .channer ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.now .channer ul li a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+}
+.now .channer ul li:first-child a {
+  background: url(../images/ico_post.png);
+  margin-left: 0;
+}
+.now .channer ul li:first-child a:hover {
+  background: url(../images/ico_post_on.png);
+}
+.now .channer ul li:nth-child(2) a {
+  background: url(../images/ico_facebook.png);
+}
+.now .channer ul li:nth-child(2) a:hover {
+  background: url(../images/ico_facebook_on.png);
+}
+.now .channer ul li:nth-child(3) a {
+  background: url(../images/ico_instagram.png);
+}
+.now .channer ul li:nth-child(3) a:hover {
+  background: url(../images/ico_instagram_on.png);
+}
+.now .channer ul li:nth-child(4) a {
+  background: url(../images/ico_youtube.png);
+}
+.now .channer ul li:nth-child(4) a:hover {
+  background: url(../images/ico_youtube_on.png);
+}
+.now .channer ul li:nth-child(5) a {
+  background: url(../images/ico_app.png);
+}
+.now .channer ul li:nth-child(5) a:hover {
+  background: url(../images/ico_app_on.png);
+}
+.now .channer ul li:nth-child(6) a {
+  background: url(../images/ico_kakao.png);
+}
+.now .channer ul li:nth-child(6) a:hover {
+  background: url(../images/ico_kakao_on.png);
+}
+.now .channer ul li:nth-child(7) a {
+  background: url(../images/ico_sbot.png);
+}
+.now .channer ul li:nth-child(7) a:hover {
+  background: url(../images/ico_sbot_on.png);
+}
+
+/* Art & Culture */
+.art {
+  margin: 150px 0;
+}
+.art .title h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 60px;
+  color: #222;
+  font-weight: 400;
+  text-align: center;
+}
+.art .content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 520px;
+  margin: 50px 0;
+  overflow: hidden; /* 오른쪽 사진영역 때문에 가로스크롤생겨서 넘친거 일단 숨김!!! */
+}
+.art .content .txt {
+  width: 57%;
+  height: 450px;
+}
+.art .content .txt li {
+  background: #1f2a55;
+}
+.art .content .txt .box {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 50%;
+  margin: 0 auto;
+}
+.art .content .pics {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  display: flex;
+}
+.art .content .pics li {
+  width: 480px;
+  height: 480px;
+  margin-right: 40px;
+}
+.art .content .pics li:first-child {
+  background: url(../images/art01.jpg);
+}
+.art .content .pics li:nth-child(2) {
+  background: url(../images/art02.png);
 }
