@@ -677,14 +677,14 @@ header .login ul li img {
 .art .content .txt li {
   background: #1f2a55;
 }
-.art .content .txt .box {
-  /* position: absolute;
+/* .art .content .txt .box {
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
   width: 50%;
   margin: 0 auto;
-}
+} */
 .art .content .pics {
   position: absolute;
   left: 50%;
