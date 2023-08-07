@@ -16,7 +16,10 @@ a {
 body {
   font-family: SDGothic, sans-serif;
 }
-
+#wrap {
+  position: relative;
+  width: 100%;
+}
 /* top */
 .top {
   display: flex;
@@ -86,7 +89,21 @@ header nav ul {
   justify-content: space-between;
 }
 header nav ul li a {
+  position: relative;
+  display: inline-block;
   color: #444;
+}
+/* header nav ul li:hover a::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #f22c2d;
+} */
+header nav ul li a:hover {
+  color: #f22c2d;
 }
 header .login ul {
   display: flex;
@@ -982,25 +999,33 @@ header .login ul li img {
 /* Magazine */
 .magazine {
   width: 1280px;
-  margin: 0 auto;
+  margin: 0 auto 150px;
 }
 .magazine .content {
   display: flex;
-  margin: 70px 0;
+  margin: 70px auto;
 }
 .magazine .content .video_wrap {
   position: sticky;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 30%;
   height: 100%;
 }
 .magazine .content .video_wrap .video {
+  position: relative;
   width: 363px;
   height: 454px;
   text-align: center;
-  padding: 30px auto;
-  box-sizing: border-box;
+}
+.magazine .content .video_wrap .video ul {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+}
+.magazine .content .video_wrap .video ul li {
+  margin-left: 10px;
 }
 .magazine .content .video_wrap .video video {
   width: 100%;
@@ -1016,18 +1041,213 @@ header .login ul li img {
   font-size: 30px;
   color: #222;
 }
-.magazine .content .pics {
+.magazine .content .pic_bg {
+  width: 70%;
 }
-.magazine .content .pics ul {
-  width: 33.333%;
+.magazine .content .pic_bg .pics {
+  display: flex;
+  width: 100%;
+}
+.magazine .content .pic_bg .pics ul {
   display: flex;
   flex-direction: column;
   border-left: 1px solid #ebebeb;
   padding: 0 20px;
   box-sizing: border-box;
 }
-.magazine .content .pics ul li a img {
+.magazine .content .pic_bg .pics ul li {
+  margin-bottom: 60px;
+}
+.magazine .content .pic_bg .pics ul li:last-child {
+  margin-bottom: 0;
+  line-height: 26px;
+}
+.magazine .content .pic_bg .pics ul li a p:first-child {
+  overflow: hidden;
+}
+.magazine .content .pic_bg .pics ul li a:hover p:first-child {
+  /* width: fit-content;
+  height: fit-content; */
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.magazine .content .pic_bg .pics ul li a img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1);
+  transition: 0.5s;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+.magazine .content .pic_bg .pics ul li a:hover img {
+  transform: scale(1.1);
+  position: relative;
+  z-index: -1;
+}
+.magazine .content .pic_bg .pics ul li a p:nth-child(2) {
+  font-size: 18px;
+  color: #222;
+  margin: 20px 0 10px;
+}
+.magazine .content .pic_bg .pics ul li a:hover p:nth-child(2) {
+  text-decoration: underline;
+}
+.magazine .content .pic_bg .pics ul li a p:nth-child(3) {
+  font-size: 15px;
+  color: #666;
+}
+
+/* footer */
+footer {
+  background: #232323;
+  padding: 20px 30px;
+}
+footer .foot {
+  width: 1280px;
+  margin: 30px auto;
+}
+footer .foot .foot_top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(202, 200, 199, 0.1);
+}
+footer .foot .foot_top .menu_list > div {
+  margin-bottom: 20px;
+}
+footer .foot .foot_top .menu_list > div ul {
+  display: flex;
+  margin-left: 50px;
+}
+footer .foot .foot_top .menu_list > div ul li {
+  margin-right: 20px;
+}
+footer .foot .foot_top .menu_list > div ul li a {
+  font-size: 15px;
+  color: #949494;
+}
+footer .foot .foot_top .menu_list > div ul li a:hover {
+  color: #fff;
+}
+footer .foot .foot_top .menu_list > div:nth-child(2) ul li .point_r {
+  color: #f22c2d;
+  font-weight: bold;
+}
+footer .foot .foot_top .site_list {
+  position: absolute;
+  top: -20px;
+  right: 0;
+}
+footer .foot .foot_top .site_list > div {
+  margin-bottom: 20px;
+}
+footer .foot .foot_top .site_list .site {
+  margin: 0 0 20px 23px;
+}
+footer .foot .foot_top .site_list .site a {
+  position: relative;
+  display: inline-block;
+  width: 155px;
+  padding: 5px 0;
+  color: #949494;
+  font-size: 13px;
+  border-bottom: 1px solid #949494;
+}
+footer .foot .foot_top .site_list .site a:after {
+  content: url(../images/ico_arrowFamily.png);
+  position: absolute;
+  right: 0;
+}
+footer .foot .foot_top .site_list .sns ul {
+  display: flex;
+}
+footer .foot .foot_top .site_list .sns ul li a {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 20px;
+}
+footer .foot .foot_top .site_list .sns ul li:first-child a {
+  background: url(../images/ico_snspost.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(2) a {
+  background: url(../images/ico_snsFb.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(3) a {
+  background: url(../images/ico_snsInsta.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(4) a {
+  background: url(../images/ico_snsYoutube.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(5) a {
+  background: url(../images/ico_snsSbot.png);
+}
+footer .foot .foot_top .site_list .sns ul li:first-child a:hover {
+  background: url(../images/ico_snspost_on.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(2) a:hover {
+  background: url(../images/ico_snsFb_on.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(3) a:hover {
+  background: url(../images/ico_snsInsta_on.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(4) a:hover {
+  background: url(../images/ico_snsYoutube_on.png);
+}
+footer .foot .foot_top .site_list .sns ul li:nth-child(5) a:hover {
+  background: url(../images/ico_snsSbot_on.png);
+}
+footer .foot .foot_bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #8a8a8a;
+  font-size: 13px;
+  line-height: 22px;
+}
+footer .foot .foot_bottom p img {
+  opacity: 0.7;
+}
+
+/* s_bot */
+.s_bot a {
+  position: fixed;
+  right: 40px;
+  bottom: 170px;
+  width: 68px;
+  height: 68px;
+  background: url(../images/ico_sbot1.png) 0 0 no-repeat;
+  background-size: cover;
+}
+/* STORE INFO */
+.info {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 156px;
+  height: 150px;
+  background: #2d2d2d;
+  text-align: center;
+}
+.info a {
+  display: block;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+.info a p:first-child {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.info a p:first-child:after {
+  content: url(../images/ico_gate_arrow_black.png);
+  position: absolute;
+  margin-left: 5px;
+}
+.info a p:last-child {
+  font-family: "Cormorant Garamond", serif;
+  color: #bea36b;
+  font-size: 13px;
 }
