@@ -1062,30 +1062,33 @@ header .login ul li img {
   margin-bottom: 0;
   line-height: 26px;
 }
+.magazine .content .pic_bg .pics ul li a {
+  display: block;
+}
 .magazine .content .pic_bg .pics ul li a p:first-child {
-  overflow: hidden;
+  /* overflow: hidden; */
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .magazine .content .pic_bg .pics ul li a:hover p:first-child {
-  /* width: fit-content;
-  height: fit-content; */
   background: rgba(0, 0, 0, 0.2);
-  border-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s;
 }
 .magazine .content .pic_bg .pics ul li a img {
   position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: 100% 100%;
+  object-position: center;
   transform: scale(1);
-  transition: 0.5s;
-  border: 1px solid #e5e5e5;
+  transition: transform 0.5s;
   box-sizing: border-box;
 }
-.magazine .content .pic_bg .pics ul li a:hover img {
+/* .magazine .content .pic_bg .pics ul li a:hover img {
   transform: scale(1.1);
   position: relative;
   z-index: -1;
-}
+} */
 .magazine .content .pic_bg .pics ul li a p:nth-child(2) {
   font-size: 18px;
   color: #222;
