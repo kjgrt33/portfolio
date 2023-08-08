@@ -20,6 +20,7 @@ body {
   position: relative;
   width: 100%;
 }
+
 /* top */
 .top {
   display: flex;
@@ -1066,9 +1067,9 @@ header .login ul li img {
   display: block;
 }
 .magazine .content .pic_bg .pics ul li a p:first-child {
-  /* overflow: hidden; */
+  overflow: hidden;
   background: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #e5e5e5;
 }
 .magazine .content .pic_bg .pics ul li a:hover p:first-child {
   background: rgba(0, 0, 0, 0.2);
@@ -1080,15 +1081,14 @@ header .login ul li img {
   height: 100%;
   object-fit: 100% 100%;
   object-position: center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  box-sizing: border-box;
-}
-/* .magazine .content .pic_bg .pics ul li a:hover img {
   transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.magazine .content .pic_bg .pics ul li a:hover img {
+  transform: scale(1.2);
   position: relative;
   z-index: -1;
-} */
+}
 .magazine .content .pic_bg .pics ul li a p:nth-child(2) {
   font-size: 18px;
   color: #222;
@@ -1224,6 +1224,7 @@ footer .foot .foot_bottom p img {
   background: url(../images/ico_sbot1.png) 0 0 no-repeat;
   background-size: cover;
 }
+
 /* STORE INFO */
 .info {
   position: fixed;
