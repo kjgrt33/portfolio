@@ -62,7 +62,7 @@ section {
 section .sub_title h2 {
   font-size: 44px;
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: -4px;
 }
 section .sub_menu ul {
   display: flex;
