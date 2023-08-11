@@ -24,7 +24,7 @@ header {
   top: 0;
 }
 
-header nav ul li:nth-child(3) a {
+header nav ul li:first-child a {
   color: #f22c2d;
 }
 
