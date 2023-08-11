@@ -11,13 +11,94 @@ a {
   text-decoration: none;
 }
 @font-face {
-  font-family: Pretendard, sans-serif;
+  font-family: Pretendard;
   src: url(../webfonts/Pretendard-Regular.otf) format("otf");
 }
 @font-face {
-  font-family: Agatho, serif;
+  font-family: Agatho;
   src: url(../webfonts/Agatho_Regular.otf) format("otf");
 }
 body {
-  font-family: Pretendard, sans-serif;
+  font-family: Agatho;
+}
+
+#wrap {
+  position: relative;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 1897px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  margin-right: 30px;
+}
+header ul li:last-child {
+  margin-right: 0;
+}
+header .util_right ul li:nth-child(1) {
+  margin-top: 3px;
+}
+header .util_right ul li:nth-child(2) {
+  margin: 3px 70px 0 0;
+}
+header ul li a {
+  font-family: "Montserrat";
+  color: #fff;
+  font-size: 14px;
+}
+header .logo {
+  margin-top: 20px;
+}
+
+/* menu */
+header ul .menu {
+}
+header ul .menu a span {
+  display: block;
+  width: 37px;
+  height: 2px;
+  background: #fff;
+  margin-bottom: 9px;
+}
+header ul .menu a span:last-child {
+  margin-bottom: 0;
+}
+
+/* visual */
+.visual {
+  position: relative;
+  width: 100%;
+}
+.visual .pics li:first-child {
+  height: 996px;
+  background: url(../images/visual01.png) center top no-repeat;
+}
+.visual .slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Agatho;
+  font-size: 39px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.visual .slogan p {
+  font-family: Agatho;
 }
