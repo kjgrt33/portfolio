@@ -15,8 +15,8 @@ a {
   src: url(../webfonts/Pretendard-Regular.otf) format("otf");
 }
 @font-face {
-  font-family: Agatho;
-  src: url(../webfonts/Agatho_Regular.otf) format("otf");
+  font-family: PlayfairDisplay;
+  src: url(../webfonts/PlayfairDisplay-Regular.woff) format("woff");
 }
 body {
   font-family: Agatho;
@@ -56,7 +56,7 @@ header .util_right ul li:nth-child(2) {
   margin: 3px 70px 0 0;
 }
 header ul li a {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #fff;
   font-size: 14px;
 }
@@ -92,13 +92,10 @@ header ul .menu a span:last-child {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: Agatho;
+  font-family: PlayfairDisplay;
   font-size: 39px;
   font-weight: 800;
   color: #fff;
   text-align: center;
   letter-spacing: -1px;
-}
-.visual .slogan p {
-  font-family: Agatho;
 }
