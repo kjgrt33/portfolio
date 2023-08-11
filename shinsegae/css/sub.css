@@ -15,7 +15,7 @@ a {
   src: url(../webfonts/AppleSDGothicNeoR.woff) format("woff");
 }
 body {
-  font-family: SDGothic, sans-serif;
+  font-family: SDGothic;
 }
 
 /* header */
