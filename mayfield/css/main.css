@@ -15,7 +15,7 @@ a {
   src: url(../webfonts/Pretendard-Regular.otf) format("otf");
 }
 @font-face {
-  font-family: ;
+  font-family: Agatho, serif;
   src: url(../webfonts/Agatho_Regular.otf) format("otf");
 }
 body {
