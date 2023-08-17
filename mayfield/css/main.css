@@ -669,9 +669,24 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   height: auto;
 }
 
+/* [공통] 흰색 타이틀 */
+.white {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+.white h2 {
+  color: #fff;
+}
+.white p {
+  color: #fff;
+}
+
 /* wedding */
 .wedding {
   width: 100%;
   height: 240px;
   background: url(../images/full_img01.png);
+  text-align: center;
+  color: #fff;
 }
