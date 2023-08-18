@@ -22,11 +22,11 @@ gnb.forEach(function (item, keys) {
       subMenu[j].style.opacity = "1";
     });
 
-    item.onmouseleave = function () {
+    /*item.onmouseleave = function () {
       for (let i = 0; i <= 6; i++) {
         subMenu[i].style.height = 0 + "px";
       }
-    };
+    };*/
   };
 });
 

@@ -662,7 +662,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   margin-left: 0;
 }
 
-/* 하단 풀이미지 배너 */
+/* 하단 풀이미지 banner */
 .banner {
   width: 100%;
   max-width: 1920px;
@@ -675,35 +675,129 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 40px;
+  transition: 0.5s;
 }
 .white h2 {
   color: #fff;
-  font-size: 42px;
+  font-size: 40px;
+  transition: 0.8s;
 }
 .white p {
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0;
   margin-top: 10px;
+  transition: 0.8s;
 }
 
 /* [공통] 버튼 view more */
 .btn_more {
-  margin-top: 30px;
+  opacity: 0;
+  position: relative;
+  width: 200px;
+  height: 60px;
+  margin: 20px auto 0;
 }
 .btn_more p a {
   display: inline-block;
   color: #fff;
   font-size: 18px;
-  padding: 15px 50px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 100%;
+  line-height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
 }
+.btn_more .line {
+  position: absolute;
+  background: #fff;
+}
+.btn_more .line-top {
+  width: 100%;
+  height: 1px;
+  top: 10px;
+  left: 0;
+  transform-origin: top left;
+  transform: scaleX(0);
+  transition: transform 0.4s 0.3s;
+}
+.btn_more:hover .line-top {
+  transform: scaleX(1);
+  transition: transform 0.1s;
+}
+.btn_more .line-right {
+  width: 1px;
+  height: 100%;
+  top: 10px;
+  right: 0;
+  transform-origin: top right;
+  transform: scaleY(0);
+  transition: transform 0.3s 0.2s;
+}
+.btn_more:hover .line-right {
+  transform: scaleY(1);
+  transition: transform 0.2s 0.1s;
+}
+.btn_more .line-bottom {
+  width: 100%;
+  height: 1px;
+  bottom: -11px;
+  left: 0;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.2s 0.1s;
+}
+.btn_more:hover .line-bottom {
+  transform: scaleX(1);
+  transition: transform 0.3s 0.2s;
+}
+.btn_more .line-left {
+  width: 1px;
+  height: 100%;
+  top: 10px;
+  left: 0;
+  transform-origin: bottom left;
+  transform: scaleY(0);
+  transition: transform 0.1s;
+}
+.btn_more:hover .line-left {
+  transform: scaleY(1);
+  transition: transform 0.4s 0.3s;
+}
 
-/* wedding */
-.wedding {
+/* [공통] 하단 풀이미지 banner img */
+.full {
   width: 100%;
   height: 240px;
-  background: url(../images/full_img01.png);
   text-align: center;
+  transition: height 1.3s;
+}
+.full:hover {
+  height: 670px;
+}
+.full:hover > .white {
+  padding-top: 0;
+}
+.full:hover > .white h2 {
+  font-size: 55px;
+}
+.full:hover > .white p {
+  font-size: 17px;
+}
+.full:hover > .white > .btn_more {
+  opacity: 1;
+}
+/* wedding */
+.wedding {
+  background: url(../images/full_img01.png);
+}
+
+/* story */
+.story {
+  background: url(../images/full_img02.png);
+}
+
+/* service */
+.service {
+  background: url(../images/full_img03.png);
 }
