@@ -22,30 +22,22 @@ gnb.forEach(function (item, keys) {
       subMenu[j].style.opacity = "1";
     });
 
-    item.onmouseleave = function () {
+    /*item.onmouseleave = function () {
       for (let i = 0; i <= 6; i++) {
         subMenu[i].style.height = 0 + "px";
       }
-    };
+    };*/
   };
 });
 
 subMenu.forEach(function (item, keys) {
-  item.onmouseenter = function (e) {
-    let j = Array.from(subMenu).indexOf(e.target);
-    lnb.forEach(function () {
-      let subht = lnb[j].offsetHeight;
-      console.log("subht : " + subht);
-      subMenu[j].style.height = subht + "px";
-      subMenu[j].style.opacity = "1";
-    });
-    gnb[j].classList.add("on", "active");
+  item.onmouseenter = function () {
+    gnb[keys].classList.add("on", "active");
   };
 
   item.onmouseleave = function (e) {
-    for (let i = 0; i <= 4; i++) {
-      subMenu[i].style.height = 0 + "px";
-    }
+    let j = Array.from(subMenu).indexOf(e.target);
+    subMenu[j].style.height = 0 + "px";
     gnb[keys].classList.remove("on", "active");
   };
 });
