@@ -801,3 +801,60 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .service {
   background: url(../images/full_img03.png);
 }
+
+/* footer */
+footer {
+  width: 100%;
+  background: #122223;
+}
+.foot {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+.foot .foot_top {
+  display: flex;
+  justify-content: space-between;
+}
+.foot .foot_top ul {
+  display: flex;
+}
+.foot .foot_top ul li {
+  margin-right: 20px;
+}
+.foot .foot_top ul li a {
+  color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 200;
+}
+.foot .foot_top p a {
+  position: relative;
+  color: #e6e6e6;
+  font-size: 13px;
+  font-weight: 200;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.foot .foot_top p a:after {
+  content: url(../images/family_site_arr.png);
+  position: absolute;
+  top: 2px;
+  right: -20px;
+}
+.foot .foot_bottom {
+  margin: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.foot .foot_bottom ul {
+  font-size: 14px;
+  color: #9f9f9f;
+  line-height: 25px;
+  font-weight: 200;
+}
+.foot .foot_bottom p a {
+  font-size: 14px;
+  color: #e6e6e6;
+}
