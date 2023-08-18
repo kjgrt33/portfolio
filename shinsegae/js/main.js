@@ -1,16 +1,9 @@
 // submenu 스크립트
-let subMenu = document.querySelectorAll(".menu");
+let subMenu = document.querySelectorAll(".submenu");
 let gnb = document.querySelectorAll(".gnb ul li a");
 let lnb = document.querySelectorAll(".lnb");
-let ht = lnb[1].offsetHeight;
-console.log("ht : " + ht);
-for (let i = 0; i <= 6; i++) {
-  subMenu[i].style.opacity = "0";
-}
 
 gnb.forEach(function (item, keys) {
-  console.log(keys);
-
   item.onmouseenter = function (e) {
     let j = Array.from(gnb).indexOf(e.target);
     function others(item) {
@@ -25,7 +18,6 @@ gnb.forEach(function (item, keys) {
     lnb.forEach(function () {
       let subht = lnb[j].offsetHeight;
       console.log("j : " + j);
-
       subMenu[j].style.height = subht + "px";
       subMenu[j].style.opacity = "1";
     });

@@ -144,7 +144,7 @@ header .login ul li img {
 }
 
 /* 서브메뉴 lnb */
-.menu {
+.submenu {
   position: absolute;
   top: 111px;
   width: 100%;
@@ -152,40 +152,41 @@ header .login ul li img {
   overflow: hidden;
   background: #fff;
   box-shadow: 0 3px 15px 1px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 3;
   transition: height 0.5s;
 }
-.menu .submenu .lnb {
+.submenu .menu .lnb {
   width: 850px;
   margin: 0 auto;
 }
-.menu .submenu .lnb > ul {
+.submenu .menu .lnb > ul {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   padding: 40px 0;
 }
-.menu .submenu .lnb > ul > li {
+.submenu .menu .lnb > ul > li {
   flex: 1 1 14.285%;
   line-height: 35px;
 }
-.menu .submenu .lnb > ul > li > a {
+.submenu .menu .lnb > ul > li > a {
   color: #000;
 }
-.menu .submenu .lnb > ul > li > a:hover,
-.menu .submenu .lnb > ul > li > a.on {
+.submenu .menu .lnb > ul > li > a:hover,
+.submenu .menu .lnb > ul > li > a.on {
   text-decoration: underline;
 }
-.menu .submenu .lnb > ul > li .three_dept .indent {
+.submenu .menu .lnb > ul > li .three_dept .indent {
   opacity: 0;
 }
-.menu .submenu .lnb > ul > li .three_dept li a {
+.submenu .menu .lnb > ul > li .three_dept li a {
   color: #555;
   font-size: 14px;
 }
-.menu .submenu .lnb > ul > li .three_dept li a:hover {
+.submenu .menu .lnb > ul > li .three_dept li a:hover {
   color: #8b5508;
 }
+
 /* visual */
 .visual {
   position: relative;
