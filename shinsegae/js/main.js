@@ -43,7 +43,7 @@ subMenu.forEach(function (item, keys) {
   };
 
   item.onmouseleave = function (e) {
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i <= 6; i++) {
       subMenu[i].style.height = 0 + "px";
     }
     gnb[keys].classList.remove("on", "active");
