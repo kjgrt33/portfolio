@@ -43,7 +43,7 @@ header {
   align-items: center;
   padding: 0 80px;
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 3;
 }
 header ul {
   display: flex;
@@ -108,7 +108,7 @@ nav {
   height: 0;
   overflow: hidden; /* 아래 메뉴들 보여지는 거 숨기기위해 */
   background: #122223;
-  z-index: 1;
+  z-index: 2;
   transition: height 0.5s ease-out;
 }
 .nav_bg {
@@ -125,10 +125,21 @@ nav .nav_inner > ul {
   justify-content: space-between;
 }
 nav .nav_inner > ul > li > a {
+  position: relative;
   font-family: "Montserrat", sans-serif;
   color: #d4b297;
   font-size: 19px;
   font-weight: 600;
+}
+nav .nav_inner > ul > li:hover > a:after {
+  position: absolute;
+  top: -2px;
+  right: -13px;
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #d4b297;
+  border-radius: 50%;
 }
 nav .nav_inner > ul > li > .sub_menu {
   margin-top: 30px;
@@ -508,7 +519,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 3;
+  z-index: 4;
 }
 #popup:target {
   display: block;
@@ -681,14 +692,14 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .white h2 {
   color: #fff;
   font-size: 40px;
-  transition: 0.8s;
+  transition: 1.5s;
 }
 .white p {
   color: #fff;
   font-size: 14px;
   letter-spacing: 0;
   margin-top: 10px;
-  transition: 0.8s;
+  transition: 1.5s;
 }
 
 /* [공통] 버튼 view more */
@@ -779,7 +790,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   padding-top: 0;
 }
 .full:hover > .white h2 {
-  font-size: 55px;
+  font-size: 60px;
 }
 .full:hover > .white p {
   font-size: 17px;
@@ -815,6 +826,7 @@ footer {
   box-sizing: border-box;
 }
 .foot .foot_top {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -822,12 +834,19 @@ footer {
   display: flex;
 }
 .foot .foot_top ul li {
-  margin-right: 20px;
+  margin-right: 25px;
 }
 .foot .foot_top ul li a {
   color: #e6e6e6;
   font-size: 14px;
   font-weight: 200;
+}
+.foot .foot_top ul li a:hover {
+  color: #d4b297;
+}
+.foot .foot_top p {
+  position: absolute;
+  right: 20px;
 }
 .foot .foot_top p a {
   position: relative;
@@ -843,18 +862,73 @@ footer {
   top: 2px;
   right: -20px;
 }
-.foot .foot_bottom {
-  margin: 60px 0;
+.foot .foot_middle {
+  margin: 60px 0 40px;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 40px;
 }
-.foot .foot_bottom ul {
+.foot .foot_middle ul {
   font-size: 14px;
   color: #9f9f9f;
   line-height: 25px;
   font-weight: 200;
 }
-.foot .foot_bottom p a {
+.foot .foot_middle p a {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #707070;
   font-size: 14px;
   color: #e6e6e6;
+}
+.foot .foot_middle p a:after {
+  position: absolute;
+  right: 0;
+  width: 15px;
+  height: 10px;
+  content: url(../images/footer_more_arr.png);
+}
+.foot_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #9f9f9f;
+  font-size: 14px;
+}
+.foot_bottom ul {
+  display: flex;
+  align-items: center;
+}
+.foot_bottom ul li a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-left: 13px;
+}
+.foot_bottom ul li:first-child a {
+  background: url(../images/sns01.png);
+}
+.foot_bottom ul li:nth-child(2) a {
+  background: url(../images/sns02.png);
+}
+.foot_bottom ul li:nth-child(3) a {
+  background: url(../images/sns03.png);
+}
+.foot_bottom ul li:nth-child(4) a {
+  background: url(../images/sns04.png);
+}
+
+/* [공통] btn_top 상단 바로가기 버튼 */
+.btn_top a {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 73px;
+  height: 73px;
+  background: url(../images/top.svg);
+  z-index: 1;
 }
