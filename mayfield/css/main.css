@@ -190,20 +190,17 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   letter-spacing: 2px;
 }
 
-/* section con_1 */
-.con_1 {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
 /* control */
+.controller {
+  width: 100%;
+}
 .control {
-  width: 40%;
+  position: relative; /* reservation이 위에있어서 컨트롤 버튼이 hover가 안되서 포지션값 주고 z-index로 올려줌 */
+  width: 40%; /* 아래 구조를 오른쪽으로 보내기위해 전체 100%에서 해당 control의 width 40%만큼중에 오른쪽으로 보내기 위해 flex주고 end로 보냄  */
   display: flex;
   justify-content: flex-end;
   margin: 30px 0;
+  z-index: 1;
 }
 .control .inner {
   width: 80%;
@@ -242,11 +239,14 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 }
 
 /* reservation */
+.reser_con {
+  width: 100%;
+  position: relative; /* 구조상 아래라 위로 보내야해서 포지션값 주고 top으로 올림 */
+  top: -150px;
+  display: flex; /* 아래 구조를 오른쪽으로 보내기위해 전체 100%에서 해당 reservation의 width 60%만큼중에 오른쪽으로 보내기 위해 flex주고 end로 보냄  */
+  justify-content: flex-end;
+}
 .reservation {
-  position: relative;
-  top: -40px;
-  right: 0;
-  display: flex;
   width: 60%;
   height: 130px;
   background: #fff;
@@ -349,21 +349,25 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 }
 
 /* YOUR REST */
-/* .rest_con {
-  width: 100%;
-} */
 .rest {
   width: 100%;
-  max-width: 1600px;
-  margin: 130px auto 80px;
+  margin: 0 0 80px;
   display: flex;
+  justify-content: space-between;
 }
 .rest .title_box {
   width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.rest .title_box .inner {
+  width: 80%;
 }
 .rest .title_box p {
+  width: 50%;
   margin: 30px 0 50px;
   line-height: 30px;
+  word-break: keep-all;
 }
 .rest .title_box ul {
   display: flex;
@@ -518,6 +522,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   margin: 10px 0;
 }
 .dining ul {
+  width: 100%;
   display: flex;
   margin: 80px 0 150px;
 }
@@ -630,8 +635,8 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 /* [공통 스타일 컨텐츠] MAYFIELD WELLNESS & MEMBERSHIP */
 .con_same {
   width: 100%;
-  min-width: 1920px;
   display: flex;
+  justify-content: space-between;
 }
 .con_same .pic {
   width: 50%;
@@ -847,8 +852,7 @@ footer {
   background: #122223;
 }
 .foot {
-  width: 100%;
-  max-width: 1600px;
+  width: 85%;
   margin: 0 auto;
   padding: 40px 0;
   box-sizing: border-box;
@@ -959,4 +963,145 @@ footer {
   height: 73px;
   background: url(../images/top.svg);
   z-index: 1;
+}
+
+@media screen and (max-width: 1599px) {
+  header {
+    padding: 0 50px;
+  }
+
+  .dining .view_all {
+    padding: 60px 40px 20px 0;
+  }
+
+  .con_same .con .col li {
+    margin-left: 42px;
+  }
+}
+@media screen and (max-width: 1539px) {
+  .membership .con_same .con .col li a .col_img {
+    width: 249px;
+    height: 239px;
+  }
+}
+@media screen and (max-width: 1189px) {
+  .membership .con_same .con .col li a .col_img {
+    width: 219px;
+    height: 209px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .reservation .detail ul li:first-child {
+    width: 20%;
+  }
+  .reservation .detail ul li p,
+  .reservation .detail ul li p a {
+    font-size: 18px;
+  }
+  .con_same .pic {
+    height: 776px;
+  }
+}
+@media screen and (max-width: 1109px) {
+  .reservation .detail ul li:first-child {
+    margin-left: 17px;
+  }
+  .reservation .detail ul li:nth-child(2) {
+    width: 25%;
+    margin-left: 15px;
+  }
+  .reservation .detail ul li p,
+  .reservation .detail ul li p a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .control {
+    width: 100%;
+  }
+  .reservation {
+    display: none;
+  }
+  .rest {
+    margin: 50px 0 40px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .rest .title_box {
+    width: 100%;
+    justify-content: center;
+  }
+  .rest .title_box p {
+    width: 100%;
+    margin: 10px 0 20px;
+  }
+  .rest .title_box ul {
+    display: none;
+  }
+  .rest .con {
+    width: 100%;
+    padding: 0 42px;
+    margin: 40px auto;
+    box-sizing: border-box;
+  }
+  .control_2 {
+    margin: 10px 0 40px;
+  }
+  .dining ul {
+    display: flex;
+    margin: 40px 0 100px;
+  }
+  .con_same .pic {
+    display: none;
+  }
+  .con_same .con {
+    width: 100%;
+    padding: 80px 0 0;
+    box-sizing: border-box;
+  }
+  .con_same .con .col {
+    margin: 60px 0 0;
+    padding-bottom: 40px;
+  }
+  .membership .con_same .con .col {
+    margin-bottom: 30px;
+  }
+  .membership .con_same .con .col li a .col_img {
+    width: 329px;
+    height: 319px;
+  }
+  .btn_more {
+    width: 150px;
+    height: 50px;
+  }
+  .btn_more p a {
+    font-size: 16px;
+    line-height: 50px;
+  }
+  .full:hover {
+    height: 370px;
+  }
+  .full:hover > .white h2 {
+    font-size: 45px;
+  }
+  .full:hover > .white p {
+    font-size: 15px;
+  }
+  .foot .foot_middle p a {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .membership .con_same .con .col li a .col_img {
+    width: 249px;
+    height: 239px;
+  }
+}
+@media screen and (max-width: 589px) {
+  .membership .con_same .con .col li a .col_img {
+    width: 209px;
+    height: 199px;
+  }
+}
+@media screen and (max-width: 479px) {
 }
