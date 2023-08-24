@@ -49,3 +49,58 @@ subMenu.forEach(function (item, keys) {
     gnb[keys].classList.remove("on", "active");
   };
 });
+
+// visual
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  //centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: true,
+  },
+});
+
+// Art & Culture
+var swiper = new Swiper(".mySwiper1", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// Art & Culture 이전 / 다음 버튼
+document.getElementById("btn_prev").onmouseenter = function () {
+  document.querySelectorAll(".control svg")[0].classList.add("on");
+};
+document.getElementById("btn_prev").onmouseleave = function () {
+  document.querySelectorAll(".control svg")[0].classList.remove("on");
+};
+document.getElementById("btn_next").onmouseenter = function () {
+  document.querySelectorAll(".control svg")[1].classList.add("on");
+};
+document.getElementById("btn_next").onmouseleave = function () {
+  document.querySelectorAll(".control svg")[1].classList.remove("on");
+};
+
+//
+var swiper = new Swiper(".mySwiper2", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

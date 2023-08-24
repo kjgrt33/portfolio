@@ -191,9 +191,17 @@ header .login ul li img {
 .visual {
   position: relative;
 }
-.visual .pics li:first-child {
+.visual .pics li {
   height: 1080px;
+}
+.visual .pics li:first-child {
   background: url(../images/visual01.jpg) no-repeat;
+}
+.visual .pics li:nth-child(2) {
+  background: url(../images/visual02.jpg) no-repeat;
+}
+.visual .pics li:nth-child(3) {
+  background: url(../images/visual03.jpg) no-repeat;
 }
 .slogan {
   position: absolute;
@@ -206,6 +214,7 @@ header .login ul li img {
   align-items: center;
   color: #fff;
   letter-spacing: 1px;
+  z-index: 1;
 }
 .slogan .s_inner {
   width: 30%;
@@ -306,6 +315,9 @@ header .login ul li img {
   left: 10px;
   width: 7px;
   height: 10px;
+}
+.swiper-scrollbar {
+  transform-origin: left;
 }
 .slogan .txt {
   font-family: "Cormorant Garamond", serif;
@@ -734,21 +746,37 @@ header .login ul li img {
 }
 .art .content {
   position: relative;
-  display: flex;
   width: 100%;
   height: 520px;
   margin: 50px 0;
-  overflow: hidden; /* 오른쪽 사진영역 때문에 가로스크롤생겨서 넘친거 일단 숨김!!! */
+  /* overflow: hidden; /* 오른쪽 사진영역 때문에 가로스크롤생겨서 넘친거 일단 숨김!!! */
 }
 .art .content .text {
+  position: relative;
   width: 57%;
   height: 450px;
+  z-index: 1;
+  overflow: hidden;
 }
 .art .content .text li {
+  width: 100%;
   height: 100%;
+  /* background: #1f2a55; */
 }
-.art .content .text li:first-child {
+.art .content .text > li:first-child {
   background: #1f2a55;
+}
+.art .content .text > li:nth-child(2) {
+  background: #88382d;
+}
+.art .content .text > li:nth-child(3) {
+  background: #61862c;
+}
+.art .content .text > li:nth-child(4) {
+  background: #666279;
+}
+.art .content .text > li:nth-child(5) {
+  background: #176667;
 }
 .art .content .text .box {
   position: relative;
@@ -797,7 +825,7 @@ header .login ul li img {
   justify-content: end;
   align-items: center;
 }
-.art .content .text .box .control p {
+/* .art .content .text .box .control p {
   color: #fff;
   font-size: 17px;
   margin-right: 50px;
@@ -805,7 +833,7 @@ header .login ul li img {
 }
 .art .content .text .box .control p span {
   opacity: 0.7;
-}
+} */
 
 /* [공통] 컨트롤 이전/다음 버튼 svg 부분 */
 .control ul {
@@ -828,16 +856,19 @@ header .login ul li img {
 .control ul li a svg {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 3px;
   width: 50px;
   height: 50px;
   stroke-width: 1.5px;
   stroke-dasharray: 125; /* 3.14*20*2= 125 / 3.14(파이)*(반지름*2=지름)... 선의 길이 */
-  stroke-dashoffset: 0; /* 어디서 부터 시작하는지  */
+  stroke-dashoffset: 125; /* 어디서 부터 시작하는지  */
   transform: rotate(200deg);
   animation: cir02 0.4s forwards;
 }
-.control ul li:hover a svg {
+.control ul li:nth-child(2) a svg {
+  left: 2px;
+}
+.control ul li a svg:hover {
   animation: cir01 0.4s forwards;
 }
 @keyframes cir01 {
@@ -856,16 +887,60 @@ header .login ul li img {
     stroke-dashoffset: 125;
   }
 }
-.art .content .pics {
-  position: absolute;
-  left: 50%;
-  top: 10%;
+.art_pics_bg {
+  position: relative;
+  left: 40px;
+  top: -400px;
+  width: 100%;
+  height: 500px;
   display: flex;
+  justify-content: flex-end;
 }
-.art .content .pics li {
-  width: 480px;
+.art_pics_bg #swiper1 {
+  width: 990px;
+  height: 500px;
+  overflow: hidden;
+}
+.art_pics_bg .art_pics .pics {
+  position: static !important;
+  width: 100%;
+  height: 500px;
+}
+.art_pics_bg .art_pics .pics .inner {
+  display: flex;
+  z-index: 1;
+}
+.art_pics_bg .art_pics .pics .inner li {
+  /* width: 480px !important; */
   height: 480px;
   margin-right: 40px;
+}
+#btn_next {
+  width: 30px;
+  height: 30px;
+  right: 1114px;
+  top: 64%;
+  background: url(../images/nextview_w.png);
+  animation: cir02 0.4s forwards;
+}
+#btn_prev {
+  width: 30px;
+  height: 30px;
+  left: 700px;
+  top: 64%;
+  background: url(../images/preview_w.png);
+  animation: cir02 0.4s forwards;
+}
+.on {
+  animation: cir01 0.4s forwards !important;
+}
+#page {
+  width: 100px;
+  left: 573px;
+  bottom: 170px;
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 2px;
 }
 
 /* #Shinsegae Brand */
@@ -915,6 +990,12 @@ header .login ul li img {
 }
 .brand .brand_logo .control_2 li:last-child {
   right: -130%;
+}
+.brand .brand_logo .control_2 ul li a svg {
+  top: 0;
+}
+.brand .brand_logo .control_2 ul li:nth-child(2) a svg {
+  left: 0;
 }
 .brand .content {
   width: 100%;
@@ -979,7 +1060,7 @@ header .login ul li img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 2;
+  z-index: 10;
 }
 #popup:target {
   display: block; /* popup display:none한것을 타겟 후에 보이도록 */
@@ -1050,6 +1131,12 @@ header .login ul li img {
 }
 .control_3 li:last-child {
   right: -1000px;
+}
+.control_3 ul li a svg {
+  top: -1px;
+}
+.control_3 ul li:nth-child(2) a svg {
+  left: -1px;
 }
 
 /* Magazine */
@@ -1274,6 +1361,7 @@ footer .foot .foot_bottom p img {
   height: 68px;
   background: url(../images/ico_sbot1.png) 0 0 no-repeat;
   background-size: cover;
+  z-index: 1;
 }
 
 /* STORE INFO */
@@ -1285,6 +1373,7 @@ footer .foot .foot_bottom p img {
   height: 150px;
   background: #2d2d2d;
   text-align: center;
+  z-index: 1;
 }
 .info a {
   display: block;
