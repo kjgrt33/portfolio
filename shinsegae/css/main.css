@@ -855,8 +855,8 @@ header .login ul li img {
 }
 .control ul li a svg {
   position: absolute;
-  left: -2px;
-  top: -16px;
+  left: -6px;
+  top: -21px;
   width: 50px;
   height: 50px;
   stroke-width: 1.5px;
@@ -866,7 +866,7 @@ header .login ul li img {
   animation: cir02 0.4s forwards;
 }
 .control ul li:nth-child(2) a svg {
-  left: 7px;
+  left: 2px;
 }
 .control ul li a svg:hover {
   animation: cir01 0.4s forwards;
@@ -920,7 +920,7 @@ header .login ul li img {
   height: 30px;
   right: 1114px;
   top: 60%;
-  background: url(../images/nextview_w.png);
+  background: url(../images/nextview_w.png) center center;
   animation: cir02 0.4s forwards;
 }
 #btn_prev {
@@ -928,7 +928,7 @@ header .login ul li img {
   height: 30px;
   left: 700px;
   top: 60%;
-  background: url(../images/preview_w.png);
+  background: url(../images/preview_w.png) center center;
   animation: cir02 0.4s forwards;
 }
 .on {
@@ -993,9 +993,10 @@ header .login ul li img {
   right: -130%;
 }
 .brand .brand_logo .control_2 ul li a svg {
-  top: 0;
+  top: -2px;
+  left: -2px;
 }
-.brand .brand_logo .control_2 ul li a svg {
+.brand .brand_logo .control_2 ul li:nth-child(2) a svg {
   left: 0;
 }
 .brand .swiper {
@@ -1076,12 +1077,14 @@ header .login ul li img {
 #btn_next2 {
   top: 174px;
   right: 420px;
-  border: 2px solid #000;
+  background: url(../images/nextview_b.png) center center;
+  animation: cir02 0.4s forwards;
 }
 #btn_prev2 {
   top: 174px;
   left: 420px;
-  border: 2px solid #000;
+  background: url(../images/preview_b.png) center center;
+  animation: cir02 0.4s forwards;
 }
 #popup {
   display: none;
@@ -1091,7 +1094,7 @@ header .login ul li img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 10;
+  z-index: 15;
 }
 #popup:target {
   display: block; /* popup display:none한것을 타겟 후에 보이도록 */

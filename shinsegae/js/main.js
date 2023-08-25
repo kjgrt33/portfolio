@@ -82,7 +82,6 @@ var swiper = new Swiper(".mySwiper1", {
     prevEl: ".swiper-button-prev",
   },
 });
-
 // Art & Culture 이전 / 다음 버튼
 document.getElementById("btn_prev").onmouseenter = function () {
   document.querySelectorAll(".control svg")[0].classList.add("on");
@@ -97,7 +96,7 @@ document.getElementById("btn_next").onmouseleave = function () {
   document.querySelectorAll(".control svg")[1].classList.remove("on");
 };
 
-//
+// #Shinsegae Brand
 var swiper = new Swiper(".mySwiper2", {
   loop: true,
   navigation: {
@@ -105,3 +104,16 @@ var swiper = new Swiper(".mySwiper2", {
     prevEl: ".swiper-button-prev",
   },
 });
+// #Shinsegae Brand 이전 / 다음 버튼
+document.getElementById("btn_prev2").onmouseenter = function () {
+  document.querySelectorAll(".control_2 svg")[0].classList.add("on");
+};
+document.getElementById("btn_prev2").onmouseleave = function () {
+  document.querySelectorAll(".control_2 svg")[0].classList.remove("on");
+};
+document.getElementById("btn_next2").onmouseenter = function () {
+  document.querySelectorAll(".control_2 svg")[1].classList.add("on");
+};
+document.getElementById("btn_next2").onmouseleave = function () {
+  document.querySelectorAll(".control_2 svg")[1].classList.remove("on");
+};
