@@ -174,20 +174,9 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   position: relative;
   width: 100%;
 }
-.visual .pics li {
-  height: 880px;
-}
 .visual .pics li:first-child {
+  height: 880px;
   background: url(../images/visual01.png) center center no-repeat;
-}
-.visual .pics li:nth-child(2) {
-  background: url(../images/visual02.jpg) center center no-repeat;
-}
-.visual .pics li:nth-child(3) {
-  background: url(../images/visual03.jpg) center center no-repeat;
-}
-.visual .pics li:nth-child(4) {
-  background: url(../images/visual04.jpg) center center no-repeat;
 }
 .visual .slogan {
   position: absolute;
@@ -965,7 +954,7 @@ footer {
 }
 
 /* [공통] btn_top 상단 바로가기 버튼 */
-.btn_top {
+.btn_top a {
   display: inline-block;
   position: fixed;
   bottom: 20px;
@@ -974,8 +963,6 @@ footer {
   height: 73px;
   background: url(../images/top.svg);
   z-index: 1;
-  opacity: 1;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 1599px) {
