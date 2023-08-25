@@ -343,8 +343,8 @@
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-  /* content: "prev"; */
-  content: "";
+  content: "prev";
+  /* content: ""; */
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
@@ -353,8 +353,8 @@
 }
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  /* content: 'next'; */
-  content: "";
+  content: "next";
+  /* content: ""; */
 }
 /* Navigation font end */
 :root {

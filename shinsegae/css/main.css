@@ -829,15 +829,6 @@ header .login ul li img {
   justify-content: end;
   align-items: center;
 }
-/* .art .content .text .box .control p {
-  color: #fff;
-  font-size: 17px;
-  margin-right: 50px;
-  letter-spacing: 2px;
-}
-.art .content .text .box .control p span {
-  opacity: 0.7;
-} */
 
 /* [공통] 컨트롤 이전/다음 버튼 svg 부분 */
 .control ul {
@@ -915,7 +906,6 @@ header .login ul li img {
   z-index: 1;
 }
 .art_pics_bg .art_pics .pics .inner li {
-  /* width: 480px !important; */
   height: 480px;
   margin-right: 40px;
 }
@@ -934,6 +924,10 @@ header .login ul li img {
   top: 60%;
   background: url(../images/preview_w.png) center center;
   animation: cir02 0.4s forwards;
+}
+#btn_next::after,
+#btn_prev:after {
+  content: "";
 }
 .on {
   animation: cir01 0.4s forwards !important;
@@ -1089,6 +1083,10 @@ header .login ul li img {
   left: 420px;
   background: url(../images/preview_b.png) center center;
   animation: cir02 0.4s forwards;
+}
+#btn_next2::after,
+#btn_prev2:after {
+  content: "";
 }
 #popup {
   display: none;
