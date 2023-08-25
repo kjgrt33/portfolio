@@ -7,21 +7,17 @@ document.getElementById("menu").onclick = function () {
 };
 
 // visual
-/*var swiper1 = new Swiper(".mySwiper1", {
-  spaceBetween: 30,
+var swiper1 = new Swiper(".mySwiper1", {
+  effect: "fade",
   autoplay: {
-    delay: 2500,
+    delay: 3000,
     disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    type: "fraction",
   },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    hide: true,
-  },
-});*/
+});
 
 // TOP 버튼
 window.onscroll = function () {

@@ -57,7 +57,6 @@ subMenu.forEach(function (item, keys) {
 
 // visual
 var swiper1 = new Swiper(".mySwiper1", {
-  spaceBetween: 30,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
