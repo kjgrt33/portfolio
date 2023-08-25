@@ -20,11 +20,13 @@ gnb.forEach(function (item, keys) {
       console.log("j : " + j);
       subMenu[j].style.height = subht + "px";
       subMenu[j].style.opacity = "1";
+      subMenu[j].classList.add("active2");
     });
 
     item.onmouseleave = function () {
       for (let i = 0; i <= 6; i++) {
         subMenu[i].style.height = 0 + "px";
+        subMenu[j].classList.remove("active2");
       }
     };
   };
@@ -38,13 +40,16 @@ subMenu.forEach(function (item, keys) {
       console.log("subht : " + subht);
       subMenu[j].style.height = subht + "px";
       subMenu[j].style.opacity = "1";
+      subMenu[j].classList.add("active2");
     });
+
     gnb[j].classList.add("on", "active");
   };
 
   item.onmouseleave = function (e) {
     for (let i = 0; i <= 6; i++) {
       subMenu[i].style.height = 0 + "px";
+      subMenu[i].classList.remove("active2");
     }
     gnb[keys].classList.remove("on", "active");
   };
