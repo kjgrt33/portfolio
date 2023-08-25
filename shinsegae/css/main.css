@@ -78,7 +78,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 80px;
-  z-index: 4;
+  z-index: 15;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -754,7 +754,7 @@ header .login ul li img {
 .art .content .text {
   position: relative;
   width: 57%;
-  height: 450px;
+  height: 470px;
   z-index: 1;
   overflow: hidden;
 }
@@ -855,8 +855,8 @@ header .login ul li img {
 }
 .control ul li a svg {
   position: absolute;
-  left: 0;
-  top: 3px;
+  left: -2px;
+  top: -16px;
   width: 50px;
   height: 50px;
   stroke-width: 1.5px;
@@ -866,7 +866,7 @@ header .login ul li img {
   animation: cir02 0.4s forwards;
 }
 .control ul li:nth-child(2) a svg {
-  left: 2px;
+  left: 7px;
 }
 .control ul li a svg:hover {
   animation: cir01 0.4s forwards;
@@ -919,7 +919,7 @@ header .login ul li img {
   width: 30px;
   height: 30px;
   right: 1114px;
-  top: 64%;
+  top: 60%;
   background: url(../images/nextview_w.png);
   animation: cir02 0.4s forwards;
 }
@@ -927,7 +927,7 @@ header .login ul li img {
   width: 30px;
   height: 30px;
   left: 700px;
-  top: 64%;
+  top: 60%;
   background: url(../images/preview_w.png);
   animation: cir02 0.4s forwards;
 }
@@ -937,7 +937,7 @@ header .login ul li img {
 #page {
   width: 100px;
   left: 573px;
-  bottom: 170px;
+  bottom: 190px;
   color: #fff;
   font-size: 17px;
   letter-spacing: 2px;
@@ -945,6 +945,7 @@ header .login ul li img {
 
 /* #Shinsegae Brand */
 .brand {
+  position: relative;
   width: 1280px;
   margin: 100px auto;
 }
@@ -994,8 +995,11 @@ header .login ul li img {
 .brand .brand_logo .control_2 ul li a svg {
   top: 0;
 }
-.brand .brand_logo .control_2 ul li:nth-child(2) a svg {
+.brand .brand_logo .control_2 ul li a svg {
   left: 0;
+}
+.brand .swiper {
+  position: static !important;
 }
 .brand .content {
   width: 100%;
@@ -1023,14 +1027,19 @@ header .login ul li img {
   margin-top: 100px;
 }
 .brand .content ul li:nth-child(2) .txt p:first-child {
-  font-family: "Cormorant Garamond", serif;
   font-size: 24px;
+  font-family: "Cormorant Garamond", serif;
   color: #222;
   font-weight: 400;
+}
+.brand .content ul li:nth-child(2) .txt p span {
+  font-size: 23px;
+  font-family: "Noto Serif KR", serif;
 }
 .brand .content ul li:nth-child(2) .txt p:nth-child(2) {
   color: #666;
   font-size: 15px;
+  line-height: 30px;
 }
 .brand .content ul li:nth-child(2) .txt p:nth-child(3) a {
   display: inline-block;
@@ -1051,6 +1060,28 @@ header .login ul li img {
   transform: scale(1.1);
   position: relative;
   z-index: -1;
+}
+.brand .content ul li a video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+  transform: scale(1);
+}
+.brand .content ul li a:hover video {
+  transform: scale(1.1);
+  position: relative;
+  z-index: -1;
+}
+#btn_next2 {
+  top: 174px;
+  right: 420px;
+  border: 2px solid #000;
+}
+#btn_prev2 {
+  top: 174px;
+  left: 420px;
+  border: 2px solid #000;
 }
 #popup {
   display: none;
@@ -1133,7 +1164,10 @@ header .login ul li img {
   right: -1000px;
 }
 .control_3 ul li a svg {
-  top: -1px;
+  top: 0;
+}
+.control_3 ul li:first-child a svg {
+  left: 1px;
 }
 .control_3 ul li:nth-child(2) a svg {
   left: -1px;
@@ -1166,6 +1200,7 @@ header .login ul li img {
   right: 0;
   top: 0;
   display: flex;
+  z-index: 1;
 }
 .magazine .content .video_wrap .video ul li {
   margin-left: 10px;

@@ -99,6 +99,7 @@ document.getElementById("btn_next").onmouseleave = function () {
 
 //
 var swiper = new Swiper(".mySwiper2", {
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
