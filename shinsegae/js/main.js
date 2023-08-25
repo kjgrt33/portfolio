@@ -56,9 +56,8 @@ subMenu.forEach(function (item, keys) {
 });
 
 // visual
-var swiper = new Swiper(".mySwiper", {
+var swiper1 = new Swiper(".mySwiper1", {
   spaceBetween: 30,
-  //centeredSlides: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -74,7 +73,7 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // Art & Culture
-var swiper = new Swiper(".mySwiper1", {
+var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 2,
   spaceBetween: 30,
   loop: true,
@@ -102,7 +101,7 @@ document.getElementById("btn_next").onmouseleave = function () {
 };
 
 // #Shinsegae Brand
-var swiper = new Swiper(".mySwiper2", {
+var swiper3 = new Swiper(".mySwiper3", {
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -122,3 +121,17 @@ document.getElementById("btn_next2").onmouseenter = function () {
 document.getElementById("btn_next2").onmouseleave = function () {
   document.querySelectorAll(".control_2 svg")[1].classList.remove("on");
 };
+
+// TOP 버튼
+/*window.onscroll = function () {
+  let ht = document.documentElement.scrollTop;
+  console.log(ht);
+  if (ht > 50) {
+    document.getElementsByClassName("btn_top")[0].style.opacity = "1";
+  } else {
+    document.getElementsByClassName("btn_top")[0].style.opacity = "0";
+  }
+};
+document.getElementsByClassName("btn_top")[0].onclick = function () {
+  document.documentElement.scrollTop = "0";
+};*/
