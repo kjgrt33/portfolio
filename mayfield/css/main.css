@@ -43,7 +43,8 @@ header {
   align-items: center;
   padding: 0 80px;
   box-sizing: border-box;
-  z-index: 3;
+  z-index: 5;
+  transition: 0.5s;
 }
 header ul {
   display: flex;
@@ -64,6 +65,9 @@ header ul li a {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   font-size: 14px;
+}
+header ul li a.util_active {
+  color: #222;
 }
 header ul li:first-child a:hover,
 header ul li:nth-child(2) a:hover {
@@ -108,7 +112,7 @@ nav {
   height: 0;
   overflow: hidden; /* 아래 메뉴들 보여지는 거 숨기기위해 */
   background: #122223;
-  z-index: 2;
+  z-index: 4;
   transition: height 0.5s ease-out;
 }
 .nav_bg {
@@ -190,32 +194,43 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .visual .pics li:nth-child(4) {
   background: url(../images/visual04.jpg) center center no-repeat;
 }
+#mySwiper1 {
+  position: static;
+}
 #btn_next {
   width: 26px;
   height: 6px;
-  right: 1630px;
-  top: 100%;
+  right: 1619px;
+  top: 99%;
   background: url(../images/slide_right_arrow.png) center center;
-  z-index: 55;
-  border: 1px solid #000;
+  opacity: 0.5;
+  z-index: 3;
 }
 #btn_prev {
   width: 26px;
   height: 6px;
   left: 150px;
-  top: 100%;
+  top: 99%;
   background: url(../images/slide_left_arrow.png) center center;
-  z-index: 55;
-  border: 1px solid #000;
+  opacity: 0.5;
+  z-index: 3;
 }
-#btn_next::after,
+#btn_next:after,
 #btn_prev:after {
   content: "";
 }
+#btn_next:hover,
+#btn_prev:hover {
+  opacity: 1;
+}
 #page {
-  width: 100px;
-  z-index: 10;
-  border: 1px solid #000;
+  left: 196px;
+  bottom: 20px;
+  width: 34px;
+  z-index: 3;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #a1a1a1;
 }
 .visual .slogan {
   position: absolute;
@@ -253,10 +268,10 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .control_btn ul {
   display: flex;
 }
-.control_btn ul:first-child li a img {
+/* .control_btn ul:first-child li a {
   opacity: 0.5;
 }
-.control_btn ul:first-child li a:hover img {
+.control_btn ul:first-child li a:hover {
   opacity: 1;
 }
 .control_btn ul:first-child li:nth-child(2) {
@@ -267,7 +282,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 }
 .control_btn ul:first-child li:nth-child(2) span {
   color: #2a4139;
-}
+} */
 .control_btn ul:nth-child(2) li:first-child {
   display: none;
 }
@@ -285,7 +300,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   top: -170px;
   display: flex; /* 아래 구조를 오른쪽으로 보내기위해 전체 100%에서 해당 reservation의 width 60%만큼중에 오른쪽으로 보내기 위해 flex주고 end로 보냄  */
   justify-content: flex-end;
-  /* z-index: 1; */
+  z-index: 1;
 }
 .reservation {
   width: 60%;
@@ -440,6 +455,12 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   width: 60%;
   /* overflow: hidden; 오른쪽 사진영역 때문에 가로스크롤생겨서 넘친거 일단 숨김!!! */
 }
+#mySwiper2 {
+  position: static !important;
+}
+#swiper-wrapper2 {
+  height: auto;
+}
 .rest .con > ul {
   display: flex;
 }
@@ -504,6 +525,32 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 }
 .rest .con .col .txt p:nth-of-type(2) span {
   font-size: 16px;
+}
+#btn_next1 {
+  width: 26px;
+  height: 6px;
+  right: 100px;
+  top: 90%;
+  background: url(../images/slide_right_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_prev1 {
+  width: 26px;
+  height: 6px;
+  left: 84%;
+  top: 90%;
+  background: url(../images/slide_left_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_next1:after,
+#btn_prev1:after {
+  content: "";
+}
+#btn_next1:hover,
+#btn_prev1:hover {
+  opacity: 1;
 }
 
 /* [공통] 컨텐츠 컨트롤 */
@@ -593,7 +640,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 4;
+  z-index: 6;
 }
 #popup:target {
   display: block;
@@ -736,6 +783,46 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .con_same .con .control_2 {
   width: 86%;
   margin-bottom: 0;
+}
+.wellness .con_same .con {
+  position: relative;
+  display: block !important;
+  padding: 100px 0 0 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+#mySwiper3 {
+  position: static !important;
+}
+.wellness .con_same .con .col li {
+  width: 329px !important;
+  margin-left: 0 !important;
+}
+#btn_next1 {
+  width: 26px;
+  height: 6px;
+  right: 123px;
+  top: 82%;
+  background: url(../images/slide_right_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_prev2 {
+  width: 26px;
+  height: 6px;
+  left: 78%;
+  top: 82%;
+  background: url(../images/slide_left_arrow.png) center center;
+  opacity: 0.5;
+  z-index: 3;
+}
+#btn_next2:after,
+#btn_prev2:after {
+  content: "";
+}
+#btn_next2:hover,
+#btn_prev2:hover {
+  opacity: 1;
 }
 .membership .con_same .pic {
   background: url(../images/membership00.png);

@@ -7,19 +7,6 @@ document.getElementById("menu").onclick = function () {
 };
 
 // visual
-/*var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      effect: "fade",
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });*/
-
 var swiper1 = new Swiper(".mySwiper1", {
   spaceBetween: 30,
   effect: "fade",
@@ -29,18 +16,60 @@ var swiper1 = new Swiper(".mySwiper1", {
   },
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    type: "fraction",
+  },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
   },
 });
 
-// TOP 버튼
+// YOUR REST
+var swiper = new Swiper(".mySwiper2", {
+  slidesPerView: 3, // 3 * 2=6개 이상 리스트는 무조건 있어야함
+  spaceBetween: 160,
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// MAYFIELD WELLNESS
+var swiper = new Swiper(".mySwiper3", {
+  slidesPerView: 3, // 3 * 2=6개 이상 리스트는 무조건 있어야함
+  spaceBetween: 50,
+  loop: true,
+  slidesOffsetBefore: 50,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// header, TOP 버튼
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
   console.log(ht);
   if (ht > 50) {
     document.getElementsByClassName("btn_top")[0].style.opacity = "1";
+    document.getElementsByTagName("header")[0].style.background = "#fff";
+    document.getElementById("logo").setAttribute("src", "images/logo.svg");
+    //document.querySelectorAll("header ul li a").classList.add("util_active");
   } else {
     document.getElementsByClassName("btn_top")[0].style.opacity = "0";
+    document.getElementsByTagName("header")[0].style.background = "transparent";
+    document.getElementById("logo").setAttribute("src", "images/logo_w.svg");
+    //document.querySelectorAll("header ul li a").classList.remove("util_active");
   }
 };
 document.getElementsByClassName("btn_top")[0].onclick = function () {
