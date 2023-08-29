@@ -46,6 +46,9 @@ header {
   z-index: 5;
   transition: 0.5s;
 }
+.header_active {
+  box-shadow: 0 3px 15px 1px rgba(0, 0, 0, 0.1);
+}
 header ul {
   display: flex;
 }
@@ -89,7 +92,9 @@ header ul #menu a span {
 header ul #menu a span:last-child {
   margin-bottom: 0;
 }
-
+header ul #menu a span.menu_active {
+  background: #000;
+}
 /* menu 버튼 움직임 스타일 */
 .bar1 {
   /* height:2px + margin:9px = 11px; */

@@ -62,14 +62,38 @@ window.onscroll = function () {
   console.log(ht);
   if (ht > 50) {
     document.getElementsByClassName("btn_top")[0].style.opacity = "1";
+
     document.getElementsByTagName("header")[0].style.background = "#fff";
+    document.getElementsByTagName("header")[0].classList.add("header_active");
     document.getElementById("logo").setAttribute("src", "images/logo.svg");
-    //document.querySelectorAll("header ul li a").classList.add("util_active");
+    document.getElementsByClassName("point_g")[0].style.color = "#014D33";
+
+    for (let i = 0; i <= 3; i++) {
+      document
+        .querySelectorAll("header ul li a")
+        [i].classList.add("util_active");
+      document
+        .querySelectorAll("header ul #menu a span")
+        [i].classList.add("menu_active");
+    }
   } else {
     document.getElementsByClassName("btn_top")[0].style.opacity = "0";
+
     document.getElementsByTagName("header")[0].style.background = "transparent";
+    document
+      .getElementsByTagName("header")[0]
+      .classList.remove("header_active");
     document.getElementById("logo").setAttribute("src", "images/logo_w.svg");
-    //document.querySelectorAll("header ul li a").classList.remove("util_active");
+    document.getElementsByClassName("point_g")[0].style.color = "#fff";
+
+    for (let i = 0; i <= 3; i++) {
+      document
+        .querySelectorAll("header ul li a")
+        [i].classList.remove("util_active");
+      document
+        .querySelectorAll("header ul #menu a span")
+        [i].classList.remove("menu_active");
+    }
   }
 };
 document.getElementsByClassName("btn_top")[0].onclick = function () {
