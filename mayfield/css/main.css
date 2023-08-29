@@ -791,6 +791,9 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   box-sizing: border-box;
   text-align: center;
 }
+.wellness .con_same .con .control_2 {
+  margin: 60px auto 40px;
+}
 #mySwiper3 {
   position: static !important;
 }
@@ -801,22 +804,20 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 #btn_next2 {
   width: 26px;
   height: 6px;
-  right: 123px;
+  right: 65px;
   top: 82%;
   background: url(../images/slide_right_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
-  border: 1px solid #000;
 }
 #btn_prev2 {
   width: 26px;
   height: 6px;
-  left: 78%;
+  left: 84%;
   top: 82%;
   background: url(../images/slide_left_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
-  border: 1px solid #000;
 }
 #btn_next2:after,
 #btn_prev2:after {
