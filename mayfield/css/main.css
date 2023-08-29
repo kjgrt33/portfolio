@@ -569,12 +569,12 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .control_2 ul li {
   margin-left: 30px;
 }
-.control_2 ul li a img {
+/* .control_2 ul li a img {
   opacity: 0.5;
 }
 .control_2 ul li a:hover img {
   opacity: 1;
-}
+} */
 .control_2 .bar {
   width: 100%;
   height: 1px;
