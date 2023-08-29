@@ -221,6 +221,7 @@ header .login ul li img {
   z-index: 1;
 }
 .slogan .s_inner {
+  position: relative;
   width: 30%;
   height: 75%;
   margin: 0 auto;
@@ -303,22 +304,26 @@ header .login ul li img {
 .slogan .control_w ul li:last-child a {
   font-size: 0;
 }
-.slogan .control_w ul li:last-child a::before {
+/*.slogan .control_w ul li:last-child a::before {
   content: url(../images/ico_kv_pause.png);
   position: absolute;
   bottom: -32px;
   left: 10px;
   width: 7px;
   height: 10px;
-}
+}*/
 .slogan .control_w ul li:last-child a::after {
-  display: none;
+  /* display: none; */
   content: url(../images/ico_kv_play.png);
   position: absolute;
   bottom: -32px;
   left: 10px;
   width: 7px;
   height: 10px;
+  border: 1px solid #000;
+}
+.slogan .control_w ul li:last-child a.on::after {
+  content: url(../images/ico_kv_pause.png);
 }
 .swiper-scrollbar {
   transform-origin: left;
@@ -327,6 +332,21 @@ header .login ul li img {
   font-family: "Cormorant Garamond", serif;
   font-size: 80px;
   color: #fff;
+  border: 1px solid #000;
+}
+.slogan .txt p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50px, 0);
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 10;
+}
+.slogan .txt p.active3 {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 1s;
 }
 
 /* [공통] MORE 흰색 버튼 */
@@ -953,24 +973,27 @@ header .login ul li img {
 .brand .brand_logo .pics {
   margin: 40px auto;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .brand .brand_logo .pics li {
+  flex: 1 1 33.333%;
+}
+.brand .brand_logo .pics li img {
   width: 390px;
   height: 124px;
 }
 .brand .brand_logo .pics li:first-child {
-  background: url(../images/brand_logo01.png) center center no-repeat;
-  background-size: cover;
+  /* background: url(../images/brand_logo01.png) center center no-repeat;
+  background-size: cover; */
   opacity: 0.8;
 }
 .brand .brand_logo .pics li:nth-child(2) {
-  background: url(../images/brand_logo02.png) center center no-repeat;
-  background-size: cover;
+  /* background: url(../images/brand_logo02.png) center center no-repeat;
+  background-size: cover; */
 }
 .brand .brand_logo .pics li:nth-child(3) {
-  background: url(../images/brand_logo03.png) center center no-repeat;
-  background-size: cover;
+  /* background: url(../images/brand_logo03.png) center center no-repeat;
+  background-size: cover; */
   opacity: 0.7;
 }
 .brand .brand_logo .control_2 {

@@ -73,8 +73,8 @@ $(function () {
     },
     on: {
       slideChange: function () {
-        $(".txt p").removeClass("active");
-        $(".txt").eq(this.realIndex).find("p").addClass("active");
+        $(".txt p").removeClass("active3");
+        $(".txt").eq(this.realIndex).find("p").addClass("active3");
       },
     },
   });
@@ -124,6 +124,29 @@ document.getElementById("btn_next").onmouseleave = function () {
 
 // #Shinsegae Brand
 var swiper3 = new Swiper(".mySwiper3", {
+  slidesPerView: 3,
+  //loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+// #Shinsegae Brand 이전 / 다음 버튼
+document.getElementById("btn_prev2").onmouseenter = function () {
+  document.querySelectorAll(".control_2 svg")[0].classList.add("on");
+};
+document.getElementById("btn_prev2").onmouseleave = function () {
+  document.querySelectorAll(".control_2 svg")[0].classList.remove("on");
+};
+document.getElementById("btn_next2").onmouseenter = function () {
+  document.querySelectorAll(".control_2 svg")[1].classList.add("on");
+};
+document.getElementById("btn_next2").onmouseleave = function () {
+  document.querySelectorAll(".control_2 svg")[1].classList.remove("on");
+};
+
+var swiper3 = new Swiper(".mySwiper4", {
+  slidesPerView: 3,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
