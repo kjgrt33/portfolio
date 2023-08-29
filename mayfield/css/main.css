@@ -529,8 +529,8 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 #btn_next1 {
   width: 26px;
   height: 6px;
-  right: 100px;
-  top: 90%;
+  right: 102px;
+  top: 91%;
   background: url(../images/slide_right_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
@@ -539,7 +539,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   width: 26px;
   height: 6px;
   left: 84%;
-  top: 90%;
+  top: 91%;
   background: url(../images/slide_left_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
@@ -798,7 +798,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   width: 329px !important;
   margin-left: 0 !important;
 }
-#btn_next1 {
+#btn_next2 {
   width: 26px;
   height: 6px;
   right: 123px;
@@ -806,6 +806,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   background: url(../images/slide_right_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
+  border: 1px solid #000;
 }
 #btn_prev2 {
   width: 26px;
@@ -815,6 +816,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   background: url(../images/slide_left_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
+  border: 1px solid #000;
 }
 #btn_next2:after,
 #btn_prev2:after {
