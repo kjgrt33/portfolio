@@ -44,9 +44,6 @@ header ul #menu a span {
 }
 
 /* 서브 컨텐츠 */
-.section {
-  /* position: static; */
-}
 
 /* 1번째 섹션*/
 .section1 {
@@ -105,16 +102,17 @@ header ul #menu a span {
   left: 200px;
   font-family: Agatho;
   font-size: 48px;
+  z-index: 1;
 }
 .section2 .text p span {
   font-size: 33px;
 }
 .section2 .text p i {
+  font-family: "Baskervville", serif !important;
   font-size: 45px;
 }
 .section2 .map {
-  /* position: absolute;
-  left: 50%;
+  position: absolute;
+  left: 20%;
   bottom: 0;
-  transform: translateX(-50%); */
 }
