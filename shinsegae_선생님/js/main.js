@@ -122,7 +122,7 @@ document.getElementById("btn_next").onmouseleave = function () {
   document.querySelectorAll(".control svg")[1].classList.remove("on");
 };
 
-// #Shinsegae Brand
+// #Shinsegae Brand Logo
 var swiper3 = new Swiper(".mySwiper3", {
   slidesPerView: 3,
   //loop: true,
@@ -144,7 +144,7 @@ document.getElementById("btn_next2").onmouseenter = function () {
 document.getElementById("btn_next2").onmouseleave = function () {
   document.querySelectorAll(".control_2 svg")[1].classList.remove("on");
 };
-
+// #Shinsegae Brand Contents
 var swiper3 = new Swiper(".mySwiper4", {
   slidesPerView: 3,
   loop: true,
