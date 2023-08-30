@@ -67,7 +67,8 @@ window.onscroll = function () {
     document.getElementsByTagName("header")[0].classList.add("header_active");
     document.getElementById("logo").setAttribute("src", "images/logo.svg");
     document.getElementsByClassName("point_g")[0].style.color = "#014D33";
-    document.getElementById("bar2").style.transform = "scaleX(0.8)";
+    document.getElementsByTagName("span")[1].style.transform = "scaleX(0.8)";
+    document.getElementsByTagName("span")[1].style.transformOrigin = "right";
 
     for (let i = 0; i <= 4; i++) {
       document
@@ -89,7 +90,7 @@ window.onscroll = function () {
       .classList.remove("header_active");
     document.getElementById("logo").setAttribute("src", "images/logo_w.svg");
     document.getElementsByClassName("point_g")[0].style.color = "#fff";
-    document.getElementById("bar2").style.transform = "scaleX(1)";
+    document.getElementsByTagName("span")[1].style.transform = "scaleX(1)";
 
     for (let i = 0; i <= 4; i++) {
       document
