@@ -69,10 +69,13 @@ window.onscroll = function () {
     document.getElementsByClassName("point_g")[0].style.color = "#014D33";
     document.getElementById("bar2").style.transform = "scaleX(0.8)";
 
-    for (let i = 0; i <= 3; i++) {
+    for (let i = 0; i <= 4; i++) {
       document
         .querySelectorAll("header ul li a")
         [i].classList.add("util_active");
+    }
+
+    for (let i = 0; i <= 2; i++) {
       document
         .querySelectorAll("header ul #menu a span")
         [i].classList.add("menu_active");
@@ -88,10 +91,13 @@ window.onscroll = function () {
     document.getElementsByClassName("point_g")[0].style.color = "#fff";
     document.getElementById("bar2").style.transform = "scaleX(1)";
 
-    for (let i = 0; i <= 3; i++) {
+    for (let i = 0; i <= 4; i++) {
       document
         .querySelectorAll("header ul li a")
         [i].classList.remove("util_active");
+    }
+
+    for (let i = 0; i <= 2; i++) {
       document
         .querySelectorAll("header ul #menu a span")
         [i].classList.remove("menu_active");
