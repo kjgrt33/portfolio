@@ -20,6 +20,36 @@
       href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap"
       rel="stylesheet"
     />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let bg = true;
+        $("#menu").click(function () {
+          if (bg) {
+            $("header").css({
+              background: "#122223",
+              boxShadow: "none",
+            });
+            $("header ul li a").css("color", "#fff");
+            $("header ul #menu a span").css("background", "#fff");
+            $(".logo a img").attr("src", "../images/logo_w.svg");
+          } else {
+            $("header").css({
+              background: "#fff",
+              boxShadow: "0px 3px 6px 0px rgba(0, 0, 0, 0.03)",
+            });
+            $("header ul li a").css("color", "#222");
+            $("header .util_right ul li:nth-child(2) a").css(
+              "color",
+              "#014d33"
+            );
+            $("header ul #menu a span").css("background", "#000");
+            $(".logo a img").attr("src", "../images/logo.svg");
+          }
+          bg = !bg;
+        });
+      });
+    </script>
 
     <title>MAYFIELD HOTEL SEOUL</title>
   </head>
@@ -43,7 +73,7 @@
               <li id="menu">
                 <a href="#">
                   <span></span>
-                  <span id="bar2"></span>
+                  <span class="bar2_2"></span>
                   <span></span>
                 </a>
               </li>
@@ -293,8 +323,8 @@
           <div class="text1">
             <p class="title_kor">직접 재배한 식재료로 만든 다채로운 미식</p>
             <p class="des">
-              충남 예산에 위치한 약 6만 평 규모의 직영농장에서 친환경<br />
-              유기농법으로 다채로운 작물을 키웁니다.<br /><br />
+              충남 예산에 위치한 약 6만 평 규모의 직영농장에서<br />
+              친환경 유기농법으로 다채로운 작물을 키웁니다.<br /><br />
               파종부터 수확까지 매주 꼼꼼하게 관리한 식재료는<br />
               섬세한 셰프의 손길을 거쳐<br />
               신선하고 건강한, 자연과 가까운 테이블을 채우고<br />

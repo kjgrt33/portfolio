@@ -4,12 +4,4 @@ document.getElementById("menu").onclick = function () {
   document.getElementsByTagName("span")[1].classList.toggle("bar2");
   document.getElementsByTagName("span")[2].classList.toggle("bar3");
   document.getElementsByTagName("nav")[0].classList.toggle("nav_bg");
-
-  /*let status = ture;
-  if (status) {
-    document.getElementsByTagName("header")[0].style.background = "transparent";
-  } else {
-    document.getElementsByTagName("header")[0].style.background = "#fff";
-  }
-  status = !status;*/
 };
