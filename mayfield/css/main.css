@@ -103,6 +103,7 @@ header ul #menu a span.menu_active {
 .bar2 {
   transform: scaleX(0) !important;
   transform-origin: right;
+  transition: 0.1s !important;
 }
 .bar3 {
   transform: translate(0, -11px) rotate(-45deg);
