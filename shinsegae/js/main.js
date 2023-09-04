@@ -56,42 +56,19 @@ subMenu.forEach(function (item, keys) {
 });
 
 // visual
-$(function () {
-  var swiper1 = new Swiper(".mySwiper1", {
-    spaceBetween: 30,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      hide: true,
-    },
-    on: {
-      slideChange: function () {
-        $(".txt p").removeClass("active3");
-        $(".txt").eq(this.realIndex).find("p").addClass("active3");
-      },
-    },
-  });
-  swiper1.autoplay.stop();
-  let play = $(".slogan .control_w ul li").eq(3).find("a");
-  let play_status = true;
-  play.click(function () {
-    if (play_status) {
-      swiper1.autoplay.start();
-      play.addClass("on");
-    } else {
-      swiper1.autoplay.stop();
-      play.removeClass("on");
-    }
-    play_status = !play_status;
-    return false;
-  });
+var swiper1 = new Swiper(".mySwiper1", {
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: true,
+  },
 });
 
 // Art & Culture
