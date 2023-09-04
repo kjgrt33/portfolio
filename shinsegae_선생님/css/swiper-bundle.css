@@ -329,7 +329,7 @@
   left: auto;
 }
 .swiper-button-lock {
-  display: none;
+  /* display: none; */
 }
 /* Navigation font start */
 .swiper-button-prev:after,

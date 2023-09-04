@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/main2.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap"
       rel="stylesheet"
@@ -17,10 +17,82 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>신세계 백화점</title>
     <style>
+      #mySwiper1 .swiper-pagination-bullet {
+        background: transparent;
+      }
+      .progress-box {
+        position: relative;
+        top: -1000px;
+        left: 300px;
+        width: 200px;
+        z-index: 11;
+      }
+      .autoplay-progress {
+        position: absolute;
+        top: 0px;
+      }
+      .autoplay-progress p {
+        position: absolute;
+        width: 0;
+        height: 4px;
+        top: 50px;
+        background: #fff;
+        transition: 0s;
+      }
+      .autoplay-progress p.on {
+        width: 100px;
+        transition: 4s;
+      }
+      .autoplay-progress p:first-child {
+        left: 0;
+      }
+      .autoplay-progress p:nth-child(2) {
+        left: 100px;
+      }
+      .autoplay-progress p:nth-child(3) {
+        left: 200px;
+      }
+      .autoplay-progress::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        z-index: 10;
+        width: 300px;
+        height: 4px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      #mySwiper1 .swiper-pagination {
+        width: 300px;
+        display: flex;
+        color: #fff;
+        justify-content: space-between;
+        position: static;
+        text-align: left;
+      }
+      #mySwiper1 .swiper-pagination-bullet {
+        display: block;
+        font-size: 20px;
+        width: 100px !important;
+        height: 100px !important;
+        border-radius: 0;
+      }
+      #mySwiper1 .swiper-pagination-bullet-active {
+        position: relative;
+        font-size: 30px;
+        top: -10px;
+      }
       .slogan .s_inner {
         position: relative;
       }
-      .txt p {
+      .txtG {
+        width: 600px;
+        position: relative;
+        top: -100px;
+        height: 200px;
+        word-break: keep-all;
+      }
+      .slogan .txt p {
         position: absolute;
         top: 0;
         left: 0;
@@ -28,9 +100,9 @@
         opacity: 0;
         transition: all 0.5s;
         z-index: 10;
+        font-size: 56px;
       }
-
-      .txt p.active {
+      .slogan .txt p.active {
         transform: translate(0, 0);
         opacity: 1;
         transition: all 1s;
@@ -603,32 +675,44 @@
           <div class="lnb"></div>
         </div>
       </nav>
-      <div class="visual swiper mySwiper1">
+      <div class="visual swiper mySwiper1" id="mySwiper1">
         <ul class="pics swiper-wrapper">
-          <li class="swiper-slide"></li>
-          <li class="swiper-slide"></li>
-          <li class="swiper-slide"></li>
+          <li class="swiper-slide"><img src="images/visual01.jpg" alt="" /></li>
+          <li class="swiper-slide"><img src="images/visual02.jpg" alt="" /></li>
+          <li class="swiper-slide"><img src="images/visual03.jpg" alt="" /></li>
         </ul>
+        <div class="progress-box">
+          <div class="swiper-pagination"></div>
+          <div class="autoplay-progress">
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+
         <div class="slogan">
           <div class="s_inner">
             <div class="control_w">
               <ul>
-                <li><a href="#" class="swiper-pagination">01</a></li>
-                <li><a href="#" class="swiper-pagination">02</a></li>
-                <li><a href="#" class="swiper-pagination">03</a></li>
+                <!-- <li><a href="#">01</a></li>
+                <li><a href="#">02</a></li>
+                <li><a href="#">03</a></li> -->
                 <li><a href="#" class="play">재생/정지</a></li>
               </ul>
             </div>
-            <div class="swiper-scrollbar"></div>
 
-            <div class="txt">
-              <p>MAGAZINE<br />SHINSEGAE</p>
-            </div>
-            <div class="txt">
-              <p>신세계백화점이 ‘프리즈 서울 2023’ 공식 파트너로 참여합니다.</p>
-            </div>
-            <div class="txt">
-              <p>신세계 × 안드레 사라이바의 핫한 컬래버레이션</p>
+            <div class="txtG">
+              <div class="txt">
+                <p>MAGAZINE<br />SHINSEGAE</p>
+              </div>
+              <div class="txt">
+                <p>
+                  신세계백화점이 ‘프리즈 서울 2023’ 공식 파트너로 참여합니다.
+                </p>
+              </div>
+              <div class="txt">
+                <p>신세계 × 안드레 사라이바의 핫한 컬래버레이션</p>
+              </div>
             </div>
 
             <div class="btn_more_w">
@@ -803,6 +887,7 @@
         </div>
       </section>
       <section>
+        <!--art&culture-->
         <div class="art">
           <div class="title_same">
             <h2>Art & Culture</h2>
@@ -1058,8 +1143,28 @@
                       <img src="images/art05.jpg" alt="art05" />
                     </li>
                   </ul>
-                  <div class="swiper-button-next" id="btn_next"></div>
-                  <div class="swiper-button-prev" id="btn_prev"></div>
+                  <div class="swiper-button-next" id="btn_next">
+                    <svg>
+                      <circle
+                        cx="25"
+                        cy="25"
+                        r="20"
+                        fill="none"
+                        stroke="rgba(255,255,255,0.6)"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <div class="swiper-button-prev" id="btn_prev">
+                    <svg>
+                      <circle
+                        cx="25"
+                        cy="25"
+                        r="20"
+                        fill="none"
+                        stroke="rgba(255,255,255,0.6)"
+                      ></circle>
+                    </svg>
+                  </div>
                   <div class="swiper-pagination" id="page"></div>
                 </div>
               </div>
@@ -1068,17 +1173,58 @@
         </div>
       </section>
       <section>
+        <!--brand-->
         <div class="brand">
           <div class="title_same">
             <h2>#Shinsegae Brand</h2>
           </div>
+
           <div class="brand_logo">
-            <ul class="pics">
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <div class="control control_2">
+            <div class="swiper mySwiper3">
+              <ul class="pics swiper-wrapper">
+                <li class="swiper-slide">
+                  <img src="images/brand_logo01.png" alt="오노마" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="images/brand_logo02.png" alt="분더샵" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="images/brand_logo03.png" alt="아다르" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="images/brand_logo01.png" alt="오노마" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="images/brand_logo02.png" alt="분더샵" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="images/brand_logo03.png" alt="아다르" />
+                </li>
+              </ul>
+              <div class="swiper-button-next" id="btn_next2">
+                <svg>
+                  <circle
+                    cx="25"
+                    cy="25"
+                    r="20"
+                    fill="none"
+                    stroke="rgba(0,0,0,0.6)"
+                  ></circle>
+                </svg>
+              </div>
+              <div class="swiper-button-prev" id="btn_prev2">
+                <svg>
+                  <circle
+                    cx="25"
+                    cy="25"
+                    r="20"
+                    fill="none"
+                    stroke="rgba(0,0,0,0.6)"
+                  ></circle>
+                </svg>
+              </div>
+            </div>
+            <!-- <div class="control control_2">
               <ul>
                 <li>
                   <a href="#"
@@ -1107,153 +1253,154 @@
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
-          <div class="swiper mySwiper3">
-            <div class="swiper-wrapper">
-              <div class="content swiper-slide">
-                <ul>
-                  <li>
-                    <a href="#popup"
-                      ><img src="images/brand01_img01.jpg" alt="brand01_img01"
-                    /></a>
-                  </li>
-                  <li>
-                    <div class="txt">
-                      <p>
-                        MODERN LUXURY STORE<br />
-                        BOONTHESHOP
-                      </p>
-                      <p>
-                        패션, 문화, 예술, 음식 등에서<br />
-                        세련된 취향을 지닌 이들을 모두 만족시키는<br />
-                        모던 럭셔리 스페셜티 스토어
-                      </p>
-                      <p class="underline"><a href="#">detail</a></p>
-                    </div>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand01_img02.jpg" alt="brand01_img02"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand01_img03.jpg" alt="brand01_img03"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand01_img04.jpg" alt="brand01_img04"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand01_img05.jpg" alt="brand01_img05"
-                    /></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="content swiper-slide">
-                <ul>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand02_img01.jpg" alt="brand02_img01"
-                    /></a>
-                  </li>
-                  <li>
-                    <div class="txt">
-                      <p>
-                        <span class="font_s"
-                          >시대를 초월한 아름다움을 추구하는</span
-                        ><br />Timeless Luxury Jewelry
-                      </p>
-                      <p>
-                        다이아몬드 본연의 아름다움을 강조한<br />
-                        클래식한 디자인부터, 독창적인 디자인까지.<br />
-                        우아하고 아름다운 세계를 만나보시기 바랍니다.
-                      </p>
-                      <p class="underline"><a href="#">detail</a></p>
-                    </div>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand02_img02.jpg" alt="brand02_img01"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand02_img03.jpg" alt="brand02_img03"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand02_img04.jpg" alt="brand02_img04"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand02_img05.jpg" alt="brand02_img05"
-                    /></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="content swiper-slide">
-                <ul>
-                  <li>
-                    <a href="#"
-                      ><video autoplay muted loop>
-                        <source
-                          src="images/brand03_img01.mp4"
-                          type="video/mp4"
-                        /></video
-                    ></a>
-                  </li>
-                  <li>
-                    <div class="txt">
-                      <p>
-                        <span>
-                          개개인의 아름다움을 위한 약속<br />에센스 중심
-                          스킨케어 브랜드 오노마
-                        </span>
-                      </p>
-                      <p>
-                        오노마의 에센스는 레이어링 방식에 따라<br />
-                        개개인의 피부 컨디션을 케어하는데<br />
-                        도움을 주는 제품입니다.
-                      </p>
-                      <p class="underline"><a href="#">detail</a></p>
-                    </div>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand03_img02.jpg" alt="brand03_img01"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand03_img03.jpg" alt="brand03_img03"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="images/brand03_img04.jpg" alt="brand03_img04"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><video autoplay muted loop>
-                        <source
-                          src="images/brand03_img05.mp4"
-                          type="video/mp4"
-                        /></video
-                    ></a>
-                  </li>
-                </ul>
-              </div>
+          <div class="brandbg_left"></div>
+          <div class="brandbg_right"></div>
+          <div class="brand_bottom">
+            <div class="content">
+              <!--오노마-->
+              <ul>
+                <li>
+                  <a href="#"
+                    ><video autoplay muted loop>
+                      <source
+                        src="images/brand03_img01.mp4"
+                        type="video/mp4"
+                      /></video
+                  ></a>
+                </li>
+                <li>
+                  <div class="txt">
+                    <p>
+                      <span>
+                        개개인의 아름다움을 위한 약속<br />에센스 중심 스킨케어
+                        브랜드 오노마
+                      </span>
+                    </p>
+                    <p>
+                      오노마의 에센스는 레이어링 방식에 따라<br />
+                      개개인의 피부 컨디션을 케어하는데<br />
+                      도움을 주는 제품입니다.
+                    </p>
+                    <p class="underline"><a href="#">detail</a></p>
+                  </div>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand03_img02.jpg" alt="brand03_img01"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand03_img03.jpg" alt="brand03_img03"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand03_img04.jpg" alt="brand03_img04"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><video autoplay muted loop>
+                      <source
+                        src="images/brand03_img05.mp4"
+                        type="video/mp4"
+                      /></video
+                  ></a>
+                </li>
+              </ul>
             </div>
-            <div class="swiper-button-next" id="btn_next2"></div>
-            <div class="swiper-button-prev" id="btn_prev2"></div>
+            <div class="content">
+              <!--분더샵-->
+              <ul>
+                <li>
+                  <a href="#popup"
+                    ><img src="images/brand01_img01.jpg" alt="brand01_img01"
+                  /></a>
+                </li>
+                <li>
+                  <div class="txt">
+                    <p>
+                      MODERN LUXURY STORE<br />
+                      BOONTHESHOP
+                    </p>
+                    <p>
+                      패션, 문화, 예술, 음식 등에서<br />
+                      세련된 취향을 지닌 이들을 모두 만족시키는<br />
+                      모던 럭셔리 스페셜티 스토어
+                    </p>
+                    <p class="underline"><a href="#">detail</a></p>
+                  </div>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand01_img02.jpg" alt="brand01_img02"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand01_img03.jpg" alt="brand01_img03"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand01_img04.jpg" alt="brand01_img04"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand01_img05.jpg" alt="brand01_img05"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="content">
+              <!--아다르-->
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand02_img01.jpg" alt="brand02_img01"
+                  /></a>
+                </li>
+                <li>
+                  <div class="txt">
+                    <p>
+                      <span class="font_s"
+                        >시대를 초월한 아름다움을 추구하는</span
+                      ><br />Timeless Luxury Jewelry
+                    </p>
+                    <p>
+                      다이아몬드 본연의 아름다움을 강조한<br />
+                      클래식한 디자인부터, 독창적인 디자인까지.<br />
+                      우아하고 아름다운 세계를 만나보시기 바랍니다.
+                    </p>
+                    <p class="underline"><a href="#">detail</a></p>
+                  </div>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand02_img02.jpg" alt="brand02_img01"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand02_img03.jpg" alt="brand02_img03"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand02_img04.jpg" alt="brand02_img04"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/brand02_img05.jpg" alt="brand02_img05"
+                  /></a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="btn_more">
             <p><a href="sub.html">VIEW MORE</a></p>
@@ -1752,6 +1899,6 @@
     </div>
 
     <script src="js/swiper-bundle.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main2.js"></script>
   </body>
 </html>

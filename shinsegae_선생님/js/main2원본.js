@@ -57,56 +57,69 @@ subMenu.forEach(function (item, keys) {
 
 // visual
 $(function () {
+  const progressLine = $(".autoplay-progress svg line");
   var swiper1 = new Swiper(".mySwiper1", {
-    spaceBetween: 30,
+    loop: true,
     autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+      delay: 5500,
+      //disableOnInteraction: false,
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      hide: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + 0 + (index + 1) + "</span>";
+      },
     },
     on: {
+      autoplayTimeLeft(s, time, progress) {
+        console.log(this.realIndex);
+        progressLine.eq(this.realIndex).css("--progress", 1 - progress);
+        progressLine.eq(this.realIndex).siblings().css("--progress", 0);
+        $(".txt").eq(this.realIndex).find("p").addClass("active");
+      },
       slideChange: function () {
         $(".txt p").removeClass("active");
         $(".txt").eq(this.realIndex).find("p").addClass("active");
       },
     },
   });
-  swiper1.autoplay.stop();
-  let play = $(".slogan .control_w ul li").eq(3).find("a");
+  //swiper1.autoplay.start();
+  let play = $(".slogan .control_w ul li").eq(0).find("a");
   let play_status = true;
-  play.click(function () {
+  play.click(function (e) {
+    e.preventDefault();
+    const currentSlideIndex = swiper1.activeIndex;
+    console.log("현재 슬라이드 번호:", currentSlideIndex);
     if (play_status) {
-      swiper1.autoplay.start();
-      play.addClass("on");
-    } else {
       swiper1.autoplay.stop();
+      play.addClass("on");
+      const currentSlide = swiper1.slides[currentSlideIndex];
+      currentSlide.addEventListener("transitionend", function () {
+        // 애니메이션이 끝나면 정지 유지
+        swiper1.autoplay.stop();
+      });
+    } else {
+      swiper1.autoplay.start();
       play.removeClass("on");
     }
     play_status = !play_status;
-    return false;
   });
-});
 
-// Art & Culture
-var swiper2 = new Swiper(".mySwiper2", {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  // Art & Culture
+  var swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 });
 // Art & Culture 이전 / 다음 버튼
 document.getElementById("btn_prev").onmouseenter = function () {

@@ -57,56 +57,59 @@ subMenu.forEach(function (item, keys) {
 
 // visual
 $(function () {
+  const progressLines = $(".autoplay-progress svg line");
+
   var swiper1 = new Swiper(".mySwiper1", {
-    spaceBetween: 30,
+    loop: true,
     autoplay: {
-      delay: 2500,
+      delay: 5500,
       disableOnInteraction: false,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      hide: true,
-    },
     on: {
-      slideChange: function () {
-        $(".txt p").removeClass("active");
-        $(".txt").eq(this.realIndex).find("p").addClass("active");
+      autoplayTimeLeft(s, time, progress) {
+        progressLine.css("--progress", 1 - progress);
       },
     },
   });
-  swiper1.autoplay.stop();
-  let play = $(".slogan .control_w ul li").eq(3).find("a");
+
+  swiper1.autoplay.start();
+
+  swiper1.on("slideChange", function () {
+    $(".txt p").removeClass("active");
+    $(".txt").eq(this.realIndex).find("p").addClass("active");
+    var activeIndex = this.realIndex;
+    var progressLine = $(progressLines[activeIndex]);
+    progressLine.css("--progress", 1 - progress);
+  });
+  //swiper1.autoplay.start();
+  let play = $(".slogan .control_w ul li").eq(0).find("a");
   let play_status = true;
   play.click(function () {
     if (play_status) {
-      swiper1.autoplay.start();
+      swiper1.autoplay.stop();
       play.addClass("on");
     } else {
-      swiper1.autoplay.stop();
+      swiper1.autoplay.start();
       play.removeClass("on");
     }
     play_status = !play_status;
     return false;
   });
-});
 
-// Art & Culture
-var swiper2 = new Swiper(".mySwiper2", {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  // Art & Culture
+  var swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 });
 // Art & Culture 이전 / 다음 버튼
 document.getElementById("btn_prev").onmouseenter = function () {
