@@ -259,6 +259,7 @@ section .sub_con ul li a:hover .sub_pic img {
   position: fixed;
   right: 10px;
   bottom: 10px;
+  opacity: 0;
 }
 .btn_top a {
   position: relative;
