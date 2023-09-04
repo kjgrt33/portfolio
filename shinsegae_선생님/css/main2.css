@@ -873,6 +873,14 @@ header .login ul li img {
   transform: rotate(200deg);
   animation: cir02 0.4s forwards;
 }
+.art_pics_bg #btn_prev {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 26%;
+  top: 61%;
+  background: url(../images/preview_w.png) center center;
+}
 .art_pics_bg #btn_prev svg {
   position: absolute;
   left: -9px;
@@ -888,14 +896,7 @@ header .login ul li img {
 /* .art_pics_bg svg:hover {
   animation: cir01 0.4s forwards;
 } */
-.art_pics_bg #btn_prev {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 26%;
-  top: 61%;
-  background: url(../images/preview_w.png) center center;
-}
+
 #btn_next::after,
 #btn_prev:after {
   content: "";
@@ -936,21 +937,9 @@ header .login ul li img {
   height: 100%;
   object-fit: cover;
 }
-
-.brand .brandbg_left,
-.brand .brandbg_right {
-  position: absolute;
-  width: 400px;
-  top: 120px;
-  height: 120px;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.8);
-}
-.brand .brandbg_left {
-  left: 0;
-}
-.brand .brandbg_right {
-  right: 0;
+#btn_next2::after,
+#btn_prev2:after {
+  content: "";
 }
 #btn_next2 {
   position: absolute;
@@ -990,6 +979,21 @@ header .login ul li img {
   stroke-dasharray: 125;
   stroke-dashoffset: 125;
   transform: rotate(200deg);
+}
+.brand .brandbg_left,
+.brand .brandbg_right {
+  position: absolute;
+  width: 400px;
+  top: 120px;
+  height: 120px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
+}
+.brand .brandbg_left {
+  left: 0;
+}
+.brand .brandbg_right {
+  right: 0;
 }
 .brand_opacity {
   opacity: 0.1;
@@ -1124,10 +1128,6 @@ header .login ul li img {
   z-index: -1;
 }
 
-#btn_next2::after,
-#btn_prev2:after {
-  content: "";
-}
 #popup {
   display: none;
   position: fixed;

@@ -196,21 +196,85 @@ header .login ul li img {
   position: relative;
 }
 .visual .pics li {
+  width: 100%;
   height: 1080px;
 }
-.visual .pics li:first-child {
-  background: url(../images/visual01.jpg) no-repeat;
+.visual .pics li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.visual .pics li:nth-child(2) {
-  background: url(../images/visual02.jpg) no-repeat;
+
+/* progress-box */
+#mySwiper1 .swiper-pagination-bullet {
+  background: transparent;
 }
-.visual .pics li:nth-child(3) {
-  background: url(../images/visual03.jpg) no-repeat;
+.progress-box {
+  position: relative;
+  top: -950px;
+  left: 300px;
+  width: 200px;
+  z-index: 11;
 }
+#mySwiper1 .swiper-pagination {
+  width: 300px;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  position: static;
+  text-align: left;
+}
+#mySwiper1 .swiper-pagination-bullet {
+  display: block;
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 0;
+  font-size: 19px;
+}
+/* #mySwiper1 .swiper-pagination-bullet-active {
+  position: relative;
+} */
+.autoplay-progress {
+  position: absolute;
+  top: 0px;
+}
+.autoplay-progress p {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  top: 50px;
+  background: #fff;
+  transition: 0s;
+}
+.autoplay-progress p.on {
+  width: 100px;
+  transition: 4s;
+}
+.autoplay-progress p:first-child {
+  left: 0;
+}
+.autoplay-progress p:nth-child(2) {
+  left: 100px;
+}
+.autoplay-progress p:nth-child(3) {
+  left: 200px;
+}
+.autoplay-progress::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  z-index: 10;
+  width: 300px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* slogan */
 .slogan {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50px;
   width: 50%;
   height: 80%;
   display: flex;
@@ -221,6 +285,7 @@ header .login ul li img {
   z-index: 1;
 }
 .slogan .s_inner {
+  position: relative;
   width: 30%;
   height: 75%;
   margin: 0 auto;
@@ -232,101 +297,101 @@ header .login ul li img {
   display: flex;
 }
 .slogan .control_w ul li {
+  position: relative;
   margin-right: 30px;
 }
 .slogan .control_w ul li a {
   position: relative;
-  color: #fff;
-  font-size: 20px;
-}
-.slogan .control_w ul li:nth-child(2) a,
-.slogan .control_w ul li:nth-child(3) a {
-  color: rgba(255, 255, 255, 0.5);
-}
-.slogan .control_w ul li:first-child a::before {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background: #fff;
-}
-.slogan .control_w ul li:first-child a::after {
-  display: none;
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.5);
-}
-.slogan .control_w ul li:nth-child(2) a::before {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: -2px;
-  width: 50px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.5);
-}
-.slogan .control_w ul li:nth-child(2) a::after {
-  display: none;
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: -2px;
-  width: 50px;
-  height: 2px;
-  background: #fff;
-}
-.slogan .control_w ul li:nth-child(3) a::before {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: -7px;
-  width: 50px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.5);
-}
-.slogan .control_w ul li:nth-child(3) a::after {
-  display: none;
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: -7px;
-  width: 50px;
-  height: 2px;
-  background: #fff;
 }
 .slogan .control_w ul li:last-child a {
   font-size: 0;
 }
-.slogan .control_w ul li:last-child a::before {
+.slogan .control_w ul li:last-child a::after {
+  display: block;
   content: url(../images/ico_kv_pause.png);
   position: absolute;
-  bottom: -32px;
-  left: 10px;
+  top: -24px;
+  left: 240px;
   width: 7px;
   height: 10px;
+  z-index: 30;
 }
-.slogan .control_w ul li:last-child a::after {
-  display: none;
+.slogan .control_w ul li:last-child a.on::after {
   content: url(../images/ico_kv_play.png);
-  position: absolute;
-  bottom: -32px;
-  left: 10px;
-  width: 7px;
-  height: 10px;
 }
-.swiper-scrollbar {
-  transform-origin: left;
+
+/* slogan 텍스트 */
+.slogan .txtG {
+  width: 600px;
+  position: relative;
+  top: -30px;
+  height: 200px;
+  word-break: keep-all;
 }
-.slogan .txt {
+.slogan .txtG .txt {
+  font-family: "Noto Serif KR", serif;
+  color: #fff;
+  font-size: 54px;
+  line-height: 80px;
+  list-style: -2px;
+}
+.slogan .txtG .txt:first-child {
   font-family: "Cormorant Garamond", serif;
   font-size: 80px;
-  color: #fff;
+  line-height: 100px;
+}
+.slogan .txtG .txt p {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  transform: translate(50px, 0);
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 10;
+}
+.slogan .txtG .txt p.active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 1s;
+}
+.slogan .btn_more_w {
+  left: -100px;
+}
+.slogan .scroll_info p,
+.slogan .scroll_info span {
+  position: relative;
+  left: -100px;
+  top: -50px;
+}
+.slogan .scroll_info span::before {
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  content: "";
+  width: 1px;
+  height: 0;
+  background: #fff;
+  animation: scroll_info 1.5s infinite;
+}
+@keyframes scroll_info {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100px;
+  }
+}
+.slogan .scroll_info span::after {
+  position: absolute;
+  left: 0;
+  bottom: -111px;
+  content: "";
+  /* 아래 화살표 만드는 방법 */
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(140deg);
 }
 
 /* [공통] MORE 흰색 버튼 */
@@ -401,39 +466,6 @@ header .login ul li img {
 .btn_more_w:hover .line-left {
   transform: scaleY(1);
   transition: transform 0.4s 0.3s;
-}
-.slogan .scroll_info span {
-  position: relative;
-}
-.slogan .scroll_info span::before {
-  position: absolute;
-  left: 4px;
-  top: 10px;
-  content: "";
-  width: 1px;
-  height: 0;
-  background: #fff;
-  animation: scroll_info 1.5s infinite;
-}
-@keyframes scroll_info {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100px;
-  }
-}
-.slogan .scroll_info span::after {
-  position: absolute;
-  left: 0;
-  bottom: -111px;
-  content: "";
-  /* 아래 화살표 만드는 방법 */
-  width: 8px;
-  height: 8px;
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  transform: rotate(140deg);
 }
 
 /* Shopping News & Event */
@@ -763,9 +795,15 @@ header .login ul li img {
   overflow: hidden;
 }
 .art .content .text li {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  /* background: #1f2a55; */
+}
+.art .content .text li.on {
+  display: block;
 }
 .art .content .text > li:first-child {
   background: #1f2a55;
@@ -850,7 +888,7 @@ header .login ul li img {
 }
 .control ul li a svg {
   position: absolute;
-  left: -3px;
+  left: -6px;
   top: -21px;
   width: 50px;
   height: 50px;
@@ -861,7 +899,7 @@ header .login ul li img {
   animation: cir02 0.4s forwards;
 }
 .control ul li:nth-child(2) a svg {
-  left: -2px;
+  left: 2px;
 }
 .control ul li a svg:hover {
   animation: cir01 0.4s forwards;
@@ -909,20 +947,44 @@ header .login ul li img {
   height: 480px;
   margin-right: 40px;
 }
-#btn_next {
+.art_pics_bg #btn_next {
+  position: absolute;
   width: 30px;
   height: 30px;
-  right: 1114px;
-  top: 60%;
+  right: 56%;
+  top: 61%;
   background: url(../images/nextview_w.png) center center;
+}
+.art_pics_bg #btn_next svg {
+  position: absolute;
+  left: -11px;
+  top: -10px;
+  width: 50px;
+  height: 50px;
+  stroke-width: 1.5px;
+  stroke-dasharray: 125;
+  stroke-dashoffset: 125;
+  transform: rotate(200deg);
   animation: cir02 0.4s forwards;
 }
-#btn_prev {
+.art_pics_bg #btn_prev {
+  position: absolute;
   width: 30px;
   height: 30px;
-  left: 700px;
-  top: 60%;
+  left: 40%;
+  top: 61%;
   background: url(../images/preview_w.png) center center;
+}
+.art_pics_bg #btn_prev svg {
+  position: absolute;
+  left: -9px;
+  top: -10px;
+  width: 50px;
+  height: 50px;
+  stroke-width: 1.5px;
+  stroke-dasharray: 125;
+  stroke-dashoffset: 125;
+  transform: rotate(200deg);
   animation: cir02 0.4s forwards;
 }
 #btn_next::after,
@@ -932,9 +994,12 @@ header .login ul li img {
 .on {
   animation: cir01 0.4s forwards !important;
 }
+.on1 {
+  animation: cir02 0.4s forwards !important;
+}
 #page {
   width: 100px;
-  left: 573px;
+  left: 650px;
   bottom: 190px;
   color: #fff;
   font-size: 17px;
@@ -952,72 +1017,105 @@ header .login ul li img {
 }
 .brand .brand_logo .pics {
   margin: 40px auto;
-  display: flex;
-  justify-content: space-between;
 }
 .brand .brand_logo .pics li {
-  width: 390px;
   height: 124px;
+  text-align: center;
 }
-.brand .brand_logo .pics li:first-child {
-  background: url(../images/brand_logo01.png) center center no-repeat;
-  background-size: cover;
-  opacity: 0.8;
+.brand .brand_logo .pics li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.brand .brand_logo .pics li:nth-child(2) {
-  background: url(../images/brand_logo02.png) center center no-repeat;
-  background-size: cover;
+#btn_next2::after,
+#btn_prev2:after {
+  content: "";
 }
-.brand .brand_logo .pics li:nth-child(3) {
-  background: url(../images/brand_logo03.png) center center no-repeat;
-  background-size: cover;
-  opacity: 0.7;
-}
-.brand .brand_logo .control_2 {
+#btn_next2 {
   position: absolute;
-  top: 38px;
-  left: 50%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
+  top: 54%;
+  right: 32%;
+  width: 30px;
+  height: 30px;
+  background: url(../images/nextview_b.png) center center;
 }
-.brand .brand_logo .control_2 li {
-  position: relative;
+#btn_next2 svg {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 50px;
+  height: 50px;
+  stroke-width: 1.5px;
+  stroke-dasharray: 125;
+  stroke-dashoffset: 125;
+  transform: rotate(200deg);
+  z-index: 30;
 }
-.brand .brand_logo .control_2 li:first-child {
-  left: -230px;
+#btn_prev2 {
+  position: absolute;
+  top: 54%;
+  left: 32%;
+  width: 30px;
+  height: 30px;
+  background: url(../images/preview_b.png) center center;
 }
-.brand .brand_logo .control_2 li:last-child {
-  right: -130%;
+#btn_prev2 svg {
+  position: absolute;
+  left: -9px;
+  top: -10px;
+  width: 50px;
+  height: 50px;
+  stroke-width: 1.5px;
+  stroke-dasharray: 125;
+  stroke-dashoffset: 125;
+  transform: rotate(200deg);
 }
-.brand .brand_logo .control_2 ul li a svg {
-  top: -2px;
-  left: -2px;
+.brand .brandbg_left,
+.brand .brandbg_right {
+  position: absolute;
+  width: 400px;
+  top: 120px;
+  height: 120px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
 }
-.brand .brand_logo .control_2 ul li:nth-child(2) a svg {
+.brand .brandbg_left {
   left: 0;
 }
-.brand .swiper {
-  position: static !important;
+.brand .brandbg_right {
+  right: 0;
 }
-.brand .content {
+.brand .brand_bottom {
+  position: relative;
+}
+.brand_bottom > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.brand_bottom > div.on {
+  position: relative;
+  display: block;
+}
+.brand_bottom .content {
   width: 100%;
   margin: 0 auto 70px;
 }
-.brand .content ul {
+.brand_bottom .content ul {
   display: flex;
   flex-wrap: wrap;
 }
-.brand .content ul li {
+.brand_bottom .content ul li {
   width: 33.333%;
   background: rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
-.brand .content ul li:nth-child(2) {
+.brand_bottom .content ul li:nth-child(2) {
   background: #fff;
   border-top: 1px solid #e5e5e5;
 }
-.brand .content ul li:nth-child(2) .txt {
+.brand_bottom .content ul li:nth-child(2) .txt {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1025,69 +1123,54 @@ header .login ul li img {
   text-align: center;
   margin-top: 100px;
 }
-.brand .content ul li:nth-child(2) .txt p:first-child {
+.brand_bottom .content ul li:nth-child(2) .txt p:first-child {
   font-size: 24px;
   font-family: "Cormorant Garamond", serif;
   color: #222;
   font-weight: 400;
 }
-.brand .content ul li:nth-child(2) .txt p span {
+.brand_bottom .content ul li:nth-child(2) .txt p span {
   font-size: 23px;
   font-family: "Noto Serif KR", serif;
 }
-.brand .content ul li:nth-child(2) .txt p:nth-child(2) {
+.brand_bottom .content ul li:nth-child(2) .txt p:nth-child(2) {
   color: #666;
   font-size: 15px;
   line-height: 30px;
 }
-.brand .content ul li:nth-child(2) .txt p:nth-child(3) a {
+.brand_bottom .content ul li:nth-child(2) .txt p:nth-child(3) a {
   display: inline-block;
   font-size: 15px;
 }
-.brand .content ul li a {
+.brand_bottom .content ul li a {
   display: block;
   height: 100%;
 }
-.brand .content ul li a img {
+.brand_bottom .content ul li a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 1s;
   transform: scale(1);
 }
-.brand .content ul li a:hover img {
+.brand_bottom .content ul li a:hover img {
   transform: scale(1.1);
   position: relative;
   z-index: -1;
 }
-.brand .content ul li a video {
+.brand_bottom .content ul li a video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 1s;
   transform: scale(1);
 }
-.brand .content ul li a:hover video {
+.brand_bottom .content ul li a:hover video {
   transform: scale(1.1);
   position: relative;
   z-index: -1;
 }
-#btn_next2 {
-  top: 174px;
-  right: 420px;
-  background: url(../images/nextview_b.png) center center;
-  animation: cir02 0.4s forwards;
-}
-#btn_prev2 {
-  top: 174px;
-  left: 420px;
-  background: url(../images/preview_b.png) center center;
-  animation: cir02 0.4s forwards;
-}
-#btn_next2::after,
-#btn_prev2:after {
-  content: "";
-}
+/* popup */
 #popup {
   display: none;
   position: fixed;
@@ -1154,27 +1237,27 @@ header .login ul li img {
   right: 25px;
   z-index: 3;
 }
-.control_3 {
+.control_2 {
   position: absolute;
   left: 0;
   top: 50%;
 }
-.control_3 li {
+.control_2 li {
   position: relative;
 }
-.control_3 li:first-child {
+.control_2 li:first-child {
   left: -70px;
 }
-.control_3 li:last-child {
+.control_2 li:last-child {
   right: -1000px;
 }
-.control_3 ul li a svg {
+.control_2 ul li a svg {
   top: 0;
 }
-.control_3 ul li:first-child a svg {
+.control_2 ul li:first-child a svg {
   left: 1px;
 }
-.control_3 ul li:nth-child(2) a svg {
+.control_2 ul li:nth-child(2) a svg {
   left: -1px;
 }
 
