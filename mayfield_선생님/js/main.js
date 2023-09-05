@@ -41,23 +41,24 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 // MAYFIELD WELLNESS
-var swiper = new Swiper(".mySwiper3", {
-  slidesPerView: "auto", // 3 * 2=6개 이상 리스트는 무조건 있어야함
-  spaceBetween: 50,
-  slidesOffsetBefore: 50,
-  loop: true,
-  autoplay: {
-    delay: 4500,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+$(function () {
+  var swiper3 = new Swiper(".mySwiper3", {
+    slidesPerView: "auto", // 3 * 2=6개 이상 리스트는 무조건 있어야함
+    spaceBetween: 50,
+    slidesOffsetBefore: 50,
+    loop: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 });
-
 // header, TOP 버튼
-window.onscroll = function () {
+/*window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
   console.log(ht);
   if (ht > 50) {
@@ -67,18 +68,13 @@ window.onscroll = function () {
     document.getElementsByTagName("header")[0].classList.add("header_active");
     document.getElementById("logo").setAttribute("src", "images/logo.svg");
     document.getElementsByClassName("point_g")[0].style.color = "#014D33";
-    document.getElementsByTagName("span")[1].style.transform = "scaleX(0.8)";
-    document.getElementsByTagName("span")[1].style.transformOrigin = "right";
 
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i <= 3; i++) {
       document
         .querySelectorAll("header ul li a")
         [i].classList.add("util_active");
-    }
-
-    for (let i = 0; i <= 2; i++) {
       document
-        .querySelectorAll("header ul #menu a span")
+        .querySelector("header ul #menu a span")
         [i].classList.add("menu_active");
     }
   } else {
@@ -90,21 +86,17 @@ window.onscroll = function () {
       .classList.remove("header_active");
     document.getElementById("logo").setAttribute("src", "images/logo_w.svg");
     document.getElementsByClassName("point_g")[0].style.color = "#fff";
-    document.getElementsByTagName("span")[1].style.transform = "scaleX(1)";
 
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i <= 3; i++) {
       document
         .querySelectorAll("header ul li a")
         [i].classList.remove("util_active");
-    }
-
-    for (let i = 0; i <= 2; i++) {
       document
         .querySelectorAll("header ul #menu a span")
         [i].classList.remove("menu_active");
     }
   }
-};
+};*/
 document.getElementsByClassName("btn_top")[0].onclick = function () {
   document.documentElement.scrollTop = "0";
 };

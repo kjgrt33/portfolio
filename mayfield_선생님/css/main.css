@@ -20,6 +20,7 @@ a {
 }
 body {
   font-family: Pretendard;
+  /* overflow: hidden; */
 }
 
 /* beige 배경색 */
@@ -47,7 +48,7 @@ header {
   transition: 0.5s;
 }
 .header_active {
-  box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 15px 1px rgba(0, 0, 0, 0.1);
 }
 header ul {
   display: flex;
@@ -101,15 +102,10 @@ header ul #menu a span.menu_active {
   transform: translate(0, 11px) rotate(45deg);
 }
 .bar2 {
-  transform: scaleX(0) !important;
-  transform-origin: right;
-  transition: 0.1s !important;
+  transform: scaleX(0);
 }
 .bar3 {
   transform: translate(0, -11px) rotate(-45deg);
-}
-span.bar2_2 {
-  transform: scaleX(1);
 }
 
 /* nav(전체 메뉴) */
@@ -745,10 +741,34 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .con_same .con {
   width: 50%;
   background: #fbf9f6;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
 }
-.con_same .con .col li a .col_img {
-  overflow: hidden;
-  width: 329px;
+.con_same .con .col {
+  /* width: 100%; */
+  /* display: flex; */
+  /* margin: 70px 0 0; */
+}
+#mySwiper3 li.swiper-slide {
+  width: 329px !important;
+  /* margin-left: 60px; */
+  /* padding-left: 50px;
+  box-sizing: border-box; */
+}
+#mySwiper3 li:first-child.swiper-slide{
+  width: 329px !important;
+ /* padding-left: 50px; */
+}
+#mySwiper3 li a{
+  display: block;
+  width: 100%;
+}
+#mySwiper3 li a .col_img {
+  /* overflow: hidden; */
+  width: 100%;
   height: 319px;
 }
 .con_same .con .col li a .col_img img {
@@ -781,8 +801,6 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   width: 86%;
   margin-bottom: 0;
 }
-
-/*  MAYFIELD WELLNESS */
 .wellness .con_same .con {
   position: relative;
   display: block !important;
@@ -790,23 +808,20 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   box-sizing: border-box;
   text-align: center;
 }
+.wellness .con_same .con .control_2 {
+  margin: 60px auto 40px;
+}
 #mySwiper3 {
   position: static !important;
-  margin-top: 70px;
 }
-#mySwiper3 li.swiper-slide {
-  width: 329px !important;
+#mySwiper3 .swiper-slide {
+  /* width: 329px !important;
+  min-width: 329px !important; */
+  /* padding-left: 60px; */
 }
-#mySwiper3 li:first-child.swiper-slide {
-  width: 329px !important;
-}
-#mySwiper3 li a {
-  display: block;
-  width: 100%;
-}
-#mySwiper3 li a .col_img {
-  width: 100%;
-  height: 319px;
+.wellness .con_same .con .col li {
+  /* width: 329px !important;
+  margin-left: 0 !important; */
 }
 #btn_next2 {
   width: 26px;
@@ -834,29 +849,11 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 #btn_prev2:hover {
   opacity: 1;
 }
-.wellness .con_same .con .control_2 {
-  margin: 60px auto 40px;
-}
-
-/*  MAYFIELD MEMBERSHIP */
 .membership .con_same .pic {
   background: url(../images/membership00.png);
 }
-.membership .con_same .con {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 .membership .con_same .con .col {
-  width: 100%;
-  display: flex;
-  margin: 70px 0 0;
   justify-content: center;
-}
-.membership .con_same .con .col li {
-  margin-left: 60px;
 }
 .membership .con_same .con .col li:first-child {
   margin-left: 0;
@@ -1121,4 +1118,145 @@ footer {
   z-index: 1;
   opacity: 0;
   cursor: pointer;
+}
+
+/*@media screen and (max-width: 1599px) {
+  header {
+    padding: 0 50px;
+  }
+
+  .dining .view_all {
+    padding: 60px 40px 20px 0;
+  }
+
+  .con_same .con .col li {
+    margin-left: 42px;
+  }
+}
+@media screen and (max-width: 1539px) {
+  .membership .con_same .con .col li a .col_img {
+    width: 249px;
+    height: 239px;
+  }
+}
+@media screen and (max-width: 1189px) {
+  .membership .con_same .con .col li a .col_img {
+    width: 219px;
+    height: 209px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .reservation .detail ul li:first-child {
+    width: 20%;
+  }
+  .reservation .detail ul li p,
+  .reservation .detail ul li p a {
+    font-size: 18px;
+  }
+  .con_same .pic {
+    height: 776px;
+  }
+}
+@media screen and (max-width: 1109px) {
+  .reservation .detail ul li:first-child {
+    margin-left: 17px;
+  }
+  .reservation .detail ul li:nth-child(2) {
+    width: 25%;
+    margin-left: 15px;
+  }
+  .reservation .detail ul li p,
+  .reservation .detail ul li p a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .control {
+    width: 100%;
+  }
+  .reservation {
+    display: none;
+  }
+  .rest {
+    margin: 50px 0 40px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .rest .title_box {
+    width: 100%;
+    justify-content: center;
+  }
+  .rest .title_box p {
+    width: 100%;
+    margin: 10px 0 20px;
+  }
+  .rest .title_box ul {
+    display: none;
+  }
+  .rest .con {
+    width: 100%;
+    padding: 0 42px;
+    margin: 40px auto;
+    box-sizing: border-box;
+  }
+  .control_2 {
+    margin: 10px 0 40px;
+  }
+  .dining ul {
+    display: flex;
+    margin: 40px 0 100px;
+  }
+  .con_same .pic {
+    display: none;
+  }
+  .con_same .con {
+    width: 100%;
+    padding: 80px 0 0;
+    box-sizing: border-box;
+  }
+  .con_same .con .col {
+    margin: 60px 0 0;
+    padding-bottom: 40px;
+  }
+  .membership .con_same .con .col {
+    margin-bottom: 30px;
+  }
+  .membership .con_same .con .col li a .col_img {
+    width: 329px;
+    height: 319px;
+  }
+  .btn_more {
+    width: 150px;
+    height: 50px;
+  }
+  .btn_more p a {
+    font-size: 16px;
+    line-height: 50px;
+  }
+  .full:hover {
+    height: 370px;
+  }
+  .full:hover > .white h2 {
+    font-size: 45px;
+  }
+  .full:hover > .white p {
+    font-size: 15px;
+  }
+  .foot .foot_middle p a {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .membership .con_same .con .col li a .col_img {
+    width: 249px;
+    height: 239px;
+  }
+}
+@media screen and (max-width: 589px) {
+  .membership .con_same .con .col li a .col_img {
+    width: 209px;
+    height: 199px;
+  }
+}
+@media screen and (max-width: 479px) {
 }
