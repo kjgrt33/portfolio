@@ -1276,6 +1276,7 @@ header .login ul li img {
   left: 0;
   width: 30%;
   height: 100%;
+  z-index: 1;
 }
 .magazine .content .video_wrap .video {
   position: relative;
