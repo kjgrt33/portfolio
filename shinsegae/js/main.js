@@ -143,8 +143,6 @@ $(function () {
       },
     },
   });
-
-  // btn svg
   $("#btn_prev,#btn_next,#btn_prev2,#btn_next2").hover(
     function () {
       $(this).find("svg").removeClass().addClass("on");

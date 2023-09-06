@@ -20,6 +20,7 @@ a {
 }
 body {
   font-family: Pretendard;
+  overflow-x: hidden;
 }
 
 /* beige 배경색 */
@@ -211,7 +212,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   width: 26px;
   height: 6px;
   right: 1619px;
-  top: 99%;
+  top: 97%;
   background: url(../images/slide_right_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
@@ -220,7 +221,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   width: 26px;
   height: 6px;
   left: 150px;
-  top: 99%;
+  top: 97%;
   background: url(../images/slide_left_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
@@ -235,7 +236,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 }
 #page {
   left: 196px;
-  bottom: 20px;
+  bottom: 38px;
   width: 34px;
   z-index: 3;
   font-family: "Montserrat", sans-serif;

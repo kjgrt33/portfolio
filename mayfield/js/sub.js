@@ -16,7 +16,7 @@ $(function () {
       });
       $("header ul li a").css("color", "#fff");
       $("header ul #menu a span").css("background", "#fff");
-      $(".logo a img").attr("src", "../images/logo_w.svg");
+      $(".logo a img").attr("src", "images/logo_w.svg");
     } else {
       $("header").css({
         background: "#fff",
@@ -25,7 +25,7 @@ $(function () {
       $("header ul li a").css("color", "#222");
       $("header .util_right ul li:nth-child(2) a").css("color", "#014d33");
       $("header ul #menu a span").css("background", "#000");
-      $(".logo a img").attr("src", "../images/logo.svg");
+      $(".logo a img").attr("src", "images/logo.svg");
     }
     bg = !bg;
   });
