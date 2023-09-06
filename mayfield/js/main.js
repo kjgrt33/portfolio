@@ -7,21 +7,46 @@ document.getElementById("menu").onclick = function () {
 };
 
 // visual
-var swiper1 = new Swiper(".mySwiper1", {
-  spaceBetween: 30,
-  effect: "fade",
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-  },
+$(function () {
+  const progressLine = $(".autoplay-progress p");
+  var swiper1 = new Swiper(".mySwiper1", {
+    spaceBetween: 30,
+    effect: "fade",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        console.log("this.realIndex" + this.realIndex);
+        progressLine.eq(this.realIndex).addClass("on");
+        progressLine.eq(this.realIndex).siblings().removeClass("on");
+      },
+    },
+  });
+  // visual 재생/정지
+  swiper1.autoplay.start();
+  let play = $(".control_btn ul:nth-child(2) li").eq(0).find("a");
+  let play_status = true;
+  play.click(function (e) {
+    e.preventDefault();
+    if (play_status) {
+      swiper1.autoplay.stop();
+      play.addClass("on");
+    } else {
+      swiper1.autoplay.start();
+      play.removeClass("on");
+    }
+    play_status = !play_status;
+  });
 });
 
 // YOUR REST

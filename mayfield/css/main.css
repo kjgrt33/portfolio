@@ -259,6 +259,8 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 /* control */
 .controller {
   width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
 }
 .control {
   position: relative; /* reservation이 위에있어서 컨트롤 버튼이 hover가 안되서 포지션값 주고 z-index로 올려줌 */
@@ -294,21 +296,74 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .control_btn ul:first-child li:nth-child(2) span {
   color: #2a4139;
 } */
-.control_btn ul:nth-child(2) li:first-child {
+
+/* .control_btn ul:nth-child(2) li:first-child {
   display: none;
+} */
+.control_btn ul:nth-child(2) li a {
+  position: relative;
 }
-.control .inner .bar {
+.control_btn ul:nth-child(2) li a {
+  font-size: 0;
+}
+.control_btn ul:nth-child(2) li a::after {
+  display: block;
+  content: url(../images/stop.svg);
+  position: absolute;
+  top: -16px;
+  left: -10px;
+  width: 7px;
+  height: 11px;
+  z-index: 30;
+}
+.control_btn ul:nth-child(2) li a.on::after {
+  content: url(../images/play.svg);
+}
+.progress-box {
+  position: relative;
+  top: 0;
+  left: 0;
   width: 80%;
-  height: 1px;
+  height: 2px;
   margin: 15px 0;
-  background: #a1a1a1;
+  z-index: 11;
+}
+.autoplay-progress {
+  position: absolute;
+  top: 0px;
+}
+.autoplay-progress p {
+  position: absolute;
+  width: 0;
+  height: 1.5px;
+  top: 50px;
+  background: rgba(53, 53, 53, 0.685);
+  transition: 0s;
+}
+.autoplay-progress p.on {
+  width: 482px;
+  transition: 4s;
+}
+.autoplay-progress p {
+  left: 0;
+  top: 0;
+}
+.autoplay-progress::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 482px;
+  height: 1px;
+  background-color: #a1a1a1;
 }
 
 /* reservation */
 .reser_con {
   width: 100%;
   position: relative; /* 구조상 아래라 위로 보내야해서 포지션값 주고 top으로 올림 */
-  top: -170px;
+  top: -150px;
   display: flex; /* 아래 구조를 오른쪽으로 보내기위해 전체 100%에서 해당 reservation의 width 60%만큼중에 오른쪽으로 보내기 위해 flex주고 end로 보냄  */
   justify-content: flex-end;
   z-index: 1;

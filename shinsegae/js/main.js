@@ -84,6 +84,7 @@ $(function () {
       },
     },
   });
+  // visual 재생/정지
   swiper1.autoplay.start();
   let play = $(".slogan .control_w ul li").eq(0).find("a");
   let play_status = true;
