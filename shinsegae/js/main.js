@@ -136,7 +136,6 @@ $(function () {
     },
     on: {
       slideChange: function () {
-        console.log("artthis.realIndex1" + this.realIndex);
         let i = this.realIndex % 3;
         console.log("i : " + i);
         $(".brand_bottom>.content").removeClass("on");
@@ -144,6 +143,8 @@ $(function () {
       },
     },
   });
+
+  // btn svg
   $("#btn_prev,#btn_next,#btn_prev2,#btn_next2").hover(
     function () {
       $(this).find("svg").removeClass().addClass("on");
