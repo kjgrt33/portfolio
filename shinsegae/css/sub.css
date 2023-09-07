@@ -285,30 +285,3 @@ section .sub_con ul li a:hover .sub_pic img {
 .btn_top a:hover {
   background: #000;
 }
-/*.btn_top {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
-  opacity: 0;
-}
-.btn_top::before {
-  position: absolute;
-  left: 40%;
-  top: 40%;
-  transform: translate(-40%, -40%);
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  transform: rotate(-45deg);
-  z-index: 3;
-}
-.btn_top:hover {
-  background: #000;
-}*/
