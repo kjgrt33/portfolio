@@ -109,13 +109,9 @@ header ul #menu a span.menu_active {
 .bar3 {
   transform: translate(0, -11px) rotate(-45deg);
 }
-span.bar2_2 {
-  transform: scaleX(1);
-}
 
 /* nav(전체 메뉴) */
 nav {
-  /* display: none; */
   position: absolute;
   left: 0;
   top: 0;
@@ -187,7 +183,6 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 
 /* visual */
 .visual {
-  /* position: relative; */
   width: 100%;
 }
 .visual .pics li {
@@ -281,25 +276,6 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .control_btn ul {
   display: flex;
 }
-/* .control_btn ul:first-child li a {
-  opacity: 0.5;
-}
-.control_btn ul:first-child li a:hover {
-  opacity: 1;
-}
-.control_btn ul:first-child li:nth-child(2) {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  margin: 5px 20px 0;
-  color: #a1a1a1;
-}
-.control_btn ul:first-child li:nth-child(2) span {
-  color: #2a4139;
-} */
-
-/* .control_btn ul:nth-child(2) li:first-child {
-  display: none;
-} */
 .control_btn ul:nth-child(2) li a {
   position: relative;
 }
@@ -336,7 +312,6 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   position: absolute;
   width: 0;
   height: 1.5px;
-  top: 50px;
   background: rgba(53, 53, 53, 0.685);
   transition: 0s;
 }
@@ -346,7 +321,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 }
 .autoplay-progress p {
   left: 0;
-  top: 0;
+  top: -1px;
 }
 .autoplay-progress::after {
   content: "";
@@ -635,12 +610,22 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .control_2 ul li {
   margin-left: 30px;
 }
-/* .control_2 ul li a img {
-  opacity: 0.5;
+#mySwiper2 .swiper-pagination {
+  width: 300px;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  position: static;
+  text-align: left;
 }
-.control_2 ul li a:hover img {
-  opacity: 1;
-} */
+#mySwiper2 .swiper-pagination-bullet {
+  display: block;
+  width: 100px !important;
+  height: 100px !important;
+  background: transparent;
+  border-radius: 0;
+  font-size: 19px;
+}
 .control_2 .bar {
   width: 100%;
   height: 1px;

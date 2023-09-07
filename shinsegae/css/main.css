@@ -206,9 +206,6 @@ header .login ul li img {
 }
 
 /* progress-box */
-#mySwiper1 .swiper-pagination-bullet {
-  background: transparent;
-}
 .progress-box {
   position: relative;
   top: -950px;
@@ -228,12 +225,10 @@ header .login ul li img {
   display: block;
   width: 100px !important;
   height: 100px !important;
+  background: transparent;
   border-radius: 0;
   font-size: 19px;
 }
-/* #mySwiper1 .swiper-pagination-bullet-active {
-  position: relative;
-} */
 .autoplay-progress {
   position: absolute;
   top: 0px;
