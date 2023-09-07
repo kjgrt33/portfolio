@@ -83,6 +83,10 @@ var swiper = new Swiper(".mySwiper3", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
 // header, TOP 버튼

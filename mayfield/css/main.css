@@ -311,8 +311,8 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .autoplay-progress p {
   position: absolute;
   width: 0;
-  height: 1.5px;
-  background: rgba(53, 53, 53, 0.685);
+  height: 1px;
+  background: rgba(44, 44, 44, 0.678);
   transition: 0s;
 }
 .autoplay-progress p.on {
@@ -331,7 +331,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   z-index: 10;
   width: 482px;
   height: 1px;
-  background-color: #a1a1a1;
+  background-color: #c5c5c5;
 }
 
 /* reservation */
@@ -497,7 +497,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   /* overflow: hidden; 오른쪽 사진영역 때문에 가로스크롤생겨서 넘친거 일단 숨김!!! */
 }
 #mySwiper2 {
-  position: static !important;
+  position: relative !important;
 }
 #swiper-wrapper2 {
   height: auto;
@@ -610,27 +610,25 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .control_2 ul li {
   margin-left: 30px;
 }
-#mySwiper2 .swiper-pagination {
-  width: 300px;
+/* [공동] 컨텐츠 컨트롤 pagination - YOUR REST & MAYFIELD WELLNESS */
+#mySwiper2 .swiper-pagination,
+#mySwiper3 .swiper-pagination {
   display: flex;
-  color: #fff;
   justify-content: space-between;
   position: static;
-  text-align: left;
-}
-#mySwiper2 .swiper-pagination-bullet {
-  display: block;
-  width: 100px !important;
-  height: 100px !important;
-  background: transparent;
-  border-radius: 0;
-  font-size: 19px;
-}
-.control_2 .bar {
-  width: 100%;
+  width: 1040px;
   height: 1px;
+  background: #c5c5c5;
   margin-top: 30px;
-  background: #a1a1a1;
+}
+#mySwiper2 .swiper-pagination-bullet,
+#mySwiper3 .swiper-pagination-bullet {
+  display: block;
+  width: 173.333% !important;
+  height: 1px !important;
+  background: rgb(44, 44, 44);
+  border-radius: 0;
+  margin: 0 !important;
 }
 
 /* DINING EXPERIENCE */
