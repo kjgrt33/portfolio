@@ -24,7 +24,7 @@ a {
 }
 body {
   font-family: Pretendard;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* header */
