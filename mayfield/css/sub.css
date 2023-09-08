@@ -268,7 +268,7 @@ header ul #menu:hover a .bar2_2 {
 .section4 .text {
   width: 50vw;
   position: absolute;
-  left: 10%;
+  left: 8%;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -362,7 +362,7 @@ header ul #menu:hover a .bar2_2 {
   width: 50vw;
   height: 100vh;
   transform: translateY(-50%);
-  background: url(../images/map.png) center bottom;
+  background: url(../images/map.png) 80% bottom;
 }
 .section4_4 .text {
   width: 50vw;
@@ -409,7 +409,7 @@ header ul #menu:hover a .bar2_2 {
 .section5 .text1 {
   width: 50vw;
   position: absolute;
-  left: 12%;
+  left: 13%;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;

@@ -214,7 +214,7 @@ header ul #menu:hover a .bar2_2 {
   width: 50vw;
   position: absolute;
   right: 0;
-  top: 47%;
+  top: 50%;
   transform: translateY(-50%);
 }
 .section3_2 .text3 .title_kor {
@@ -253,7 +253,7 @@ header ul #menu:hover a .bar2_2 {
 }
 .section4 .text1 {
   position: absolute;
-  left: 55%;
+  left: 50%;
   top: 50%;
   width: 50vw;
   transform: translateY(-50%);
