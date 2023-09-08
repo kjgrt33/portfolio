@@ -20,7 +20,7 @@ a {
 }
 body {
   font-family: Pretendard;
-  /* overflow-x: hidden; */ /* 잠시 서브컨텐츠 작업때문에 주석처리함!나중에 주석풀어야함 !!! */
+  overflow-x: hidden;
 }
 
 /* beige 배경색 */

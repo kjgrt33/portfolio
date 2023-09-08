@@ -24,6 +24,7 @@ a {
 }
 body {
   font-family: Pretendard;
+  overflow-x: hidden;
   /* overflow: hidden; */
 }
 
@@ -174,9 +175,10 @@ header ul #menu:hover a .bar2_2 {
 }
 .section3 .text1 {
   position: absolute;
-  top: 200px;
-  left: 270px;
+  top: 50%;
+  left: 39%;
   width: 50vw;
+  transform: translate(-50%, -50%);
 }
 .section3 .text1 .title_kor {
   font-size: 27px;
@@ -190,14 +192,14 @@ header ul #menu:hover a .bar2_2 {
   right: 0;
   width: 50vw;
   height: 100vh;
-  background: url(../images/img_01.png) right top;
+  background: url(../images/img_01.png) right 50%;
   /* transform: translateX(-50%); */
 }
 .section3 .text2 {
   position: absolute;
-  left: 70%;
+  left: 76%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 .section3 .text2 .title_eng {
   color: #fff;
@@ -208,7 +210,7 @@ header ul #menu:hover a .bar2_2 {
   width: 100vw;
 }
 .section3_2 .text2 {
-  left: 15%;
+  left: 25%;
 }
 .section3_2 .text2 .title_eng {
   color: #fff;
@@ -226,6 +228,34 @@ header ul #menu:hover a .bar2_2 {
 }
 .section3_2 .text3 .des {
   color: #fff;
+}
+
+/* 3_3번째 섹션(~가로방향~) 서울에서 만나는 가장 이국적인 정취 ~ */
+.section3_3 .pic {
+  width: 50vw;
+  left: 0;
+  background: url(../images/img_01.png) 80% 50%;
+}
+.section3_3 .text3 {
+  width: 50vw;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.section3_3 .text3 .title_kor {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.section3_3 .text3 .des {
+  color: #fff;
+}
+.section3_3 .text {
+  width: 50vw;
+  position: absolute;
+  right: -18%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* 4번째 섹션(~가로방향~) Farm to Table */
@@ -265,18 +295,56 @@ header ul #menu:hover a .bar2_2 {
 .section4 .text1 .des {
   color: #fff;
 }
-
-/* 4_2번째 섹션(~가로방향~) 직접 재배한 식재료로 만든 다채로운 미식 ~ */
+/* 4_2번째 섹션(~가로방향~) 직접 재배한 식재료로 만든 다채로운 미식 ~ 풀이미지 */
 .section4_2 .pic {
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/img_02.png) left 50%;
+  transform: translate(0, 0);
+}
+.section4_2 .text1 {
+  left: 44%;
+}
+.section4_2 .text2 {
+  position: absolute;
+  left: 90px;
+  bottom: 50px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+}
+.section4_2 .text2 p img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* 4_3번째 섹션(~가로방향~) 직접 재배한 식재료로 만든 다채로운 미식 ~ */
+.section4_3 .pic {
   left: 0;
   height: 100vh;
   background: url(../images/img_02.png) right center;
   transform: translateY(-50%);
 }
-.section4_2 .text1 {
+.section4_3 .text1 {
   left: 15%;
 }
-.section4_2 .map2 {
+.section4_3 .text2 {
+  position: absolute;
+  left: 90px;
+  bottom: 50px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+}
+.section4_3 .text2 p img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.section4_3 .map2 {
   position: absolute;
   right: 0;
   top: 50%;
@@ -286,8 +354,8 @@ header ul #menu:hover a .bar2_2 {
   background: url(../images/map.png) center 90px;
 }
 
-/* 4_3번째 섹션(~가로방향~) map 이미지 ~ */
-.section4_3 .map2 {
+/* 4_4번째 섹션(~가로방향~) map 이미지 ~ */
+.section4_4 .map2 {
   position: absolute;
   left: 0%;
   top: 50%;
@@ -296,14 +364,14 @@ header ul #menu:hover a .bar2_2 {
   transform: translateY(-50%);
   background: url(../images/map.png) center bottom;
 }
-.section4_3 .text {
+.section4_4 .text {
   width: 50vw;
   position: absolute;
   left: 72%;
   top: 50%;
   transform: translateY(-50%);
 }
-.section4_3 .text .title_eng {
+.section4_4 .text .title_eng {
   margin-bottom: 30px;
 }
 
@@ -317,9 +385,9 @@ header ul #menu:hover a .bar2_2 {
 .section5 .text {
   width: 50vw;
   position: absolute;
-  left: 130%;
+  left: 0%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   text-align: center;
 }
 .section5 .text .title_eng {
@@ -330,35 +398,54 @@ header ul #menu:hover a .bar2_2 {
 }
 .section5 .pic {
   position: absolute;
-  left: 180%;
+  right: 0%;
   top: 50%;
   width: 50vw;
   height: 100vh;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   background: url(../images/sl_img_01.png) center center;
 }
+/* 겹쳐져있는 다음 내용 (인간문화재 ~) */
 .section5 .text1 {
   width: 50vw;
   position: absolute;
-  /* left: 250%;
-  top: 30%;
-  transform: translate(-50%, -30%); */
-  left: 145%;
+  left: 12%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   opacity: 0;
 }
 .section5 .pic2 {
   position: absolute;
-  /* left: 180%;
-  top: 50%; */
-  left: 180%;
+  right: 0;
   top: 50%;
   width: 50vw;
   height: 100vh;
-  transform: translate(-50%, -50%);
-  background: url(../images/sl_img_02.png) center center;
+  transform: translateY(-50%);
+  background: url(../images/sl_img_02.png) 47% center;
   opacity: 0;
+}
+/* 5_2번째 섹션(~가로방향~) 인간문화재 ~ */
+.section5_2 .text,
+.section5_2 .pic {
+  opacity: 0;
+}
+.section5_2 .text1,
+.section5_2 .pic2 {
+  opacity: 1;
+}
+
+/* 5_3번째 섹션(~가로방향~) 한옥 이미지 ~ */
+.section5_3 .pic2 {
+  left: 0;
+  opacity: 1;
+}
+.section5_3 .text {
+  width: 50vw;
+  position: absolute;
+  left: 75%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* 6번째 섹션(~가로방향~) Art Collection */
@@ -371,24 +458,24 @@ header ul #menu:hover a .bar2_2 {
 .section6 .text {
   width: 50vw;
   position: absolute;
-  left: 130%;
+  left: 0;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   text-align: center;
 }
 .section6 .text1 {
   position: absolute;
-  left: 180%;
+  left: 50%;
   top: 50%;
   width: 50vw;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
 }
 .section6 .text1 .title_kor {
   margin-bottom: 30px;
 }
-.section6 .pic {
+/* .section6 .pic {
   position: absolute;
-  left: 240%;
+  left: 135%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -398,6 +485,26 @@ header ul #menu:hover a .bar2_2 {
 .section6 .con_logo {
   position: absolute;
   left: 320%;
+  top: 50%;
+  width: 25vw;
+  transform: translate(-50%, -50%);
+} */
+
+/* 6_2번째 섹션(~가로방향~) art 이미지 ~ */
+.section6_2 .pic {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section6_2 .pic p img {
+  height: 70vh;
+}
+
+/* 6_3번째 섹션(~가로방향) logo 이미지  */
+.section6_3 .con_logo {
+  position: absolute;
+  left: 55%;
   top: 50%;
   width: 25vw;
   transform: translate(-50%, -50%);

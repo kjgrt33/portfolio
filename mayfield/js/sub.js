@@ -46,7 +46,6 @@ $(document).ready(function () {
         var idx = this.activeIndex;
         if (this.activeIndex != 0 && idx != length - 1)
           $.fn.fullpage.setAllowScrolling(false);
-        if (length == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false);
       },
       slideChangeTransitionEnd: function () {
         var idx = this.activeIndex;
