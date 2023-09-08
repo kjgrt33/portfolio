@@ -270,6 +270,7 @@ header ul #menu:hover a .bar2_2 {
 .section4_2 .pic {
   left: 0;
   height: 100vh;
+  background: url(../images/img_02.png) right center;
   transform: translateY(-50%);
 }
 .section4_2 .text1 {
