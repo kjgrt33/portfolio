@@ -279,9 +279,6 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 .control_btn ul:nth-child(2) li a {
   position: relative;
 }
-.control_btn ul:nth-child(2) li a {
-  font-size: 0;
-}
 .control_btn ul:nth-child(2) li a::after {
   display: block;
   content: url(../images/stop.svg);
