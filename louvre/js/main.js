@@ -1,9 +1,9 @@
 // IN THE NEWS
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 20,
-  centeredSlides: true,
-  //loop: true,
+  slidesPerView: 1,
+  // spaceBetween: 20,
+  // centeredSlides: true,
+  // loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
