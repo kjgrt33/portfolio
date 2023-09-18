@@ -69,6 +69,31 @@ var swiper = new Swiper(".mySwiper2", {
   },
 });
 
+// DINING EXPERIENCE
+$(function () {
+  let animationSpeed = 40; // 기본 슬라이더 속도 (초당 이동 거리)
+  let sliderWidth = $(".slider").width() * $(".slider").length; //이미지 가로 값
+  $(".slider-container").append($(".slider").eq(0).clone());
+
+  const tl = gsap.timeline({ repeat: -1 });
+  tl.to(".slider-container", {
+    x: -sliderWidth,
+    duration: animationSpeed,
+    ease: "linear",
+  });
+  tl.play();
+  $(".slider-container").hover(
+    function () {
+      tl.pause();
+    },
+    function () {
+      animationSpeed = 40; // 마우스를 떠난 후 기존 속도로 복구
+      tl.duration(animationSpeed);
+      tl.play();
+    }
+  );
+});
+
 // MAYFIELD WELLNESS
 var swiper = new Swiper(".mySwiper3", {
   slidesPerView: "auto", // 3 * 2=6개 이상 리스트는 무조건 있어야함
