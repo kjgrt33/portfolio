@@ -45,3 +45,35 @@ var swiper = new Swiper(".mySwiper2", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+// YOU WANT TO
+let img_src = $("#b_pic img").attr("src");
+
+$(".b_list li").hover(
+  function () {
+    let i = $(this).index(); // index는 0부터 시작
+
+    $("#b_pic img")
+      .attr("src", img_src.replace(img_src.substr(-5, 1), i + 2)) // index는 0부터 시작이므로 +2로
+      .attr("alt", "banner" + i);
+  },
+  function () {
+    $("#b_pic img").attr("src", "images/banner1.jpg").attr("alt", "banner1");
+  }
+);
+
+var swiper = new Swiper(".mySwiper3", {
+  slidesPerView: "auto",
+  //loop: true,
+  spaceBetween: 20,
+  //centeredSlides: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
