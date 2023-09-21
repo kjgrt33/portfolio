@@ -32,11 +32,15 @@ var swiper = new Swiper(".mySwiper1", {
 var swiper = new Swiper(".mySwiper2", {
   slidesPerView: "auto",
   spaceBetween: 20,
-  centeredSlides: true,
+  //centeredSlides: true,
+  slidesPerGroup: 1,
+  slidesPerGroupAuto: true,
+  slidesOffsetBefore: 100,
 
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    //clickable: false,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -60,11 +64,14 @@ $(".b_list li").hover(
   }
 );
 
+/* INSTAGRAM */
 var swiper = new Swiper(".mySwiper3", {
   slidesPerView: "auto",
-  //loop: true,
   spaceBetween: 20,
   //centeredSlides: true, 이거 잠시 주석
+  slidesPerGroup: 1,
+  slidesPerGroupAuto: true,
+  slidesOffsetBefore: 100,
 
   pagination: {
     el: ".swiper-pagination",

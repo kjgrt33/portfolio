@@ -680,7 +680,6 @@ header {
   #mySwiper2 {
     .swiper-wrapper {
       // margin: 0 calc((100vw - 2794px) / 2);
-      margin-left: -540px; /*이거 잠시 주석 */
       .swiper-slide {
         width: 382px !important;
         height: 419px !important;
@@ -971,7 +970,7 @@ header {
     }
     #mySwiper3 {
       .swiper-wrapper {
-        // margin-left: -640px; /* 이거 잠시 주석 */
+        // margin-left: -640px;
         .swiper-slide {
           width: 382px !important;
           background: #222;
@@ -1145,6 +1144,53 @@ footer {
           }
         }
       }
+      .sns {
+        width: 30%;
+        padding: 0 10%;
+        h4 {
+          font-family: Montserrat;
+          font-size: 15px;
+          font-weight: 600;
+          letter-spacing: 2px;
+          margin-bottom: 30px;
+        }
+        ul {
+          width: 100%;
+          display: flex;
+          li {
+            flex: 1 1 16.666%;
+            a {
+              position: relative;
+              display: block;
+              color: #fff;
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              border: 2px solid rgba(119, 119, 119, 0.726);
+              svg {
+                font: 400 14px/1.57 Roboto, Open Sans, Arial, Helvetica,
+                  sans-serif;
+                overflow-wrap: break-word;
+                list-style: none;
+                color: inherit;
+                box-sizing: border-box;
+                height: 1em;
+                width: 1em;
+                pointer-events: none;
+                fill: currentColor;
+                font-size: 24px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+              &:hover {
+                border-color: #fff;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1180,15 +1226,6 @@ footer {
     }
   }
 
-  /* LOUVRE AT HOME */
-  .home {
-    #mySwiper2 {
-      .swiper-wrapper {
-        margin-left: -390px;
-      }
-    }
-  }
-
   /* YOU WANT TO */
   .want {
     h4 {
@@ -1208,11 +1245,11 @@ footer {
           }
         }
       }
-      #mySwiper3 {
+      /* #mySwiper3 {
         .swiper-wrapper {
           padding: 0 4% !important;
         }
-      }
+      } */
     }
   }
 
@@ -1255,7 +1292,7 @@ footer {
   #instagram_bg {
     .instagram {
       .top {
-        padding: 0 4%;
+        /* padding: 0 4%; */
       }
     }
   }
@@ -1284,6 +1321,17 @@ footer {
 }
 
 @media screen and (max-width: 1280px) {
+  /* INSTAGRAM */
+  #instagram_bg {
+    .instagram {
+      #mySwiper3 {
+        .swiper-wrapper {
+          margin-left: -40px;
+        }
+      }
+    }
+  }
+
   /* IMMERSE YOURSELF */
   #immerse_bg {
     .immerse {
@@ -1379,15 +1427,6 @@ footer {
         a .con .img {
           height: 450px;
         }
-      }
-    }
-  }
-
-  /* LOUVRE AT HOME */
-  .home {
-    #mySwiper2 {
-      .swiper-wrapper {
-        margin-left: -210px;
       }
     }
   }
@@ -1487,7 +1526,6 @@ footer {
   .home {
     #mySwiper2 {
       .swiper-wrapper {
-        margin-left: -110px;
         .swiper-slide {
           height: auto !important;
           a .con .img {
@@ -1566,6 +1604,15 @@ footer {
     }
   }
 
+  /* LOUVRE AT HOME */
+  .home {
+    #mySwiper2 {
+      .swiper-wrapper {
+        margin-left: -50px;
+      }
+    }
+  }
+
   /* IMMERSE YOURSELF */
   #immerse_bg {
     .immerse {
@@ -1586,6 +1633,17 @@ footer {
     ul {
       width: 100%;
       margin-top: 20px;
+    }
+  }
+
+  /* INSTAGRAM */
+  #instagram_bg {
+    .instagram {
+      #mySwiper3 {
+        .swiper-wrapper {
+          margin-left: -60px;
+        }
+      }
     }
   }
 
@@ -1719,15 +1777,6 @@ footer {
       }
     }
   }
-
-  /* LOUVRE AT HOME */
-  .home {
-    #mySwiper2 {
-      .swiper-wrapper {
-        margin-left: -40px;
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 639px) {
@@ -1805,11 +1854,31 @@ footer {
 }
 
 @media screen and (max-width: 510px) {
+  /* LOUVRE AT HOME */
+  .home {
+    #mySwiper2 {
+      .swiper-wrapper {
+        margin-left: -80px;
+      }
+    }
+  }
+
   /* YOU WANT TO */
   .want {
     h4 {
       &:after {
         width: 60%;
+      }
+    }
+  }
+
+  /* INSTAGRAM */
+  #instagram_bg {
+    .instagram {
+      #mySwiper3 {
+        .swiper-wrapper {
+          margin-left: -80px;
+        }
       }
     }
   }
