@@ -679,8 +679,8 @@ header {
   margin-bottom: 80px;
   #mySwiper2 {
     .swiper-wrapper {
-      margin: 0 calc((100vw - 2794px) / 2);
-      /* margin-left: -540px; */
+      // margin: 0 calc((100vw - 2794px) / 2);
+      margin-left: -540px; /*이거 잠시 주석 */
       .swiper-slide {
         width: 382px !important;
         height: 419px !important;
@@ -971,7 +971,7 @@ header {
     }
     #mySwiper3 {
       .swiper-wrapper {
-        //margin-left: -640px;
+        // margin-left: -640px; /* 이거 잠시 주석 */
         .swiper-slide {
           width: 382px !important;
           background: #222;

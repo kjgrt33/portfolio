@@ -16,7 +16,6 @@ pauseButton.addEventListener("click", function (e) {
 // IN THE NEWS
 var swiper = new Swiper(".mySwiper1", {
   slidesPerView: "auto",
-  //loop: true,
   spaceBetween: 20,
   centeredSlides: true,
   pagination: {
@@ -32,7 +31,6 @@ var swiper = new Swiper(".mySwiper1", {
 // LOUVRE AT HOME
 var swiper = new Swiper(".mySwiper2", {
   slidesPerView: "auto",
-  //loop: true,
   spaceBetween: 20,
   centeredSlides: true,
 
@@ -66,7 +64,7 @@ var swiper = new Swiper(".mySwiper3", {
   slidesPerView: "auto",
   //loop: true,
   spaceBetween: 20,
-  //centeredSlides: true,
+  //centeredSlides: true, 이거 잠시 주석
 
   pagination: {
     el: ".swiper-pagination",
