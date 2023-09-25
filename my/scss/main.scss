@@ -47,6 +47,7 @@ header {
   justify-content: space-between;
   border-bottom: 1px solid #000;
   padding-bottom: 30px;
+  background: #f5eee8;
 
   .logo {
     width: 139px;
@@ -219,6 +220,7 @@ header {
       img {
         width: 60px;
         height: 60px;
+        transition: 0.5s;
       }
       .desc {
         margin-left: 20px;
@@ -235,6 +237,9 @@ header {
           color: #474747;
         }
       }
+    }
+    .text:hover img {
+      transform: rotateY(180deg);
     }
   }
 }
@@ -386,10 +391,11 @@ header {
 
     .info {
       .pic {
-        width: 100%;
+        width: 300px;
         height: 300px;
         border: 1px solid #191919;
-        border-radius: 5px;
+        border-radius: 50%;
+        overflow: hidden;
         img {
           width: 100%;
           height: 100%;
@@ -472,6 +478,38 @@ header {
       }
     }
   }
+}
+
+/* [공통] btn_top 상단 바로가기 버튼 */
+.btn_top {
+  position: fixed;
+  right: 60px;
+  bottom: 130px;
+  opacity: 0;
+}
+.btn_top a {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.btn_top a::before {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  transform: translate(-40%, -40%);
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  z-index: 3;
+}
+.btn_top a:hover {
+  background: #000;
 }
 
 /* 반응형 */
@@ -892,6 +930,14 @@ header {
 }
 
 @media screen and (max-width: 540px) {
+  /* header */
+  header .util ul li a {
+    font-size: 14px;
+  }
+  header .util ul li a span {
+    display: none;
+  }
+
   /* visual */
   .visual {
     .slogan {
@@ -903,14 +949,6 @@ header {
         font-size: 50px;
       }
     }
-  }
-
-  /* header */
-  header .util ul li a {
-    font-size: 14px;
-  }
-  header .util ul li a span {
-    display: none;
   }
 
   /* contact me */
@@ -928,5 +966,15 @@ header {
     .sns {
       display: none;
     }
+  }
+
+  /* [공통] btn_top 상단 바로가기 버튼 */
+  .btn_top {
+    bottom: 110px;
+  }
+
+  .btn_top a {
+    width: 36px;
+    height: 36px;
   }
 }
