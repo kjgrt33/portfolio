@@ -194,6 +194,9 @@ header {
       justify-content: space-between;
       padding-bottom: 50px;
       border-bottom: 1px solid #000;
+      li {
+        width: 50%;
+      }
       li:first-child {
         position: relative;
         margin-right: 60px;
@@ -235,6 +238,7 @@ header {
           line-height: 30px;
           margin: 10px 0;
           color: #474747;
+          word-break: keep-all;
         }
       }
     }
@@ -288,7 +292,7 @@ header {
     border-right: 1px solid #191919;
     h5 {
       font-family: Syne;
-      font-size: 50px;
+      font-size: 60px;
     }
     p {
       font-family: Pretendard;
@@ -386,6 +390,14 @@ header {
         text-shadow: -1px 0 #191919, 0 1px #191919, 1px 0 #191919,
           0 -1px #191919;
         color: #f5eee8;
+      }
+      .kor {
+        font-family: Pretendard;
+        font-size: 18px;
+        letter-spacing: -1px;
+        text-shadow: none;
+        color: #191919;
+        line-height: 40px;
       }
     }
 
@@ -904,8 +916,10 @@ header {
     flex-direction: column;
     padding-bottom: 0;
 
-    li:nth-child(odd) {
+    li {
       width: 100%;
+    }
+    li:nth-child(odd) {
       border-bottom: 1px solid #000;
       padding-bottom: 10px;
     }
@@ -957,6 +971,9 @@ header {
       h2 {
         font-size: 60px;
         line-height: 60px;
+        .kor {
+          font-size: 16px;
+        }
       }
       .info {
         .pic {
