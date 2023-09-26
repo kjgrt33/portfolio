@@ -1,3 +1,28 @@
+// intro
+$(function () {
+  $(".intro .text") //의미없는 이벤트 시작
+    .css({ transform: "translateY(0)", opacity: "0" })
+    .animate(
+      { transform: "translateY(10px)", opacity: "1" }, //의미없는 이벤트 끝
+      3000,
+      function () {
+        $(".intro").css("top", "-100%");
+        /*  $(".intro")
+          .css("opacity", "1")
+          .animate({ opacity: 0 }, 1000, function () {
+            $(".intro").css("display", "none");
+          }); */
+        $("#wrap")
+          .css({ top: "0", opacity: "0" })
+          .animate({ opacity: 1 }, 1000);
+        /* .css("opacity", "0")
+          .animate({ opacity: 1 }, 500, function () {
+            $("#wrap").css("display", "block");
+          }); */
+      }
+    );
+});
+
 // menu 버튼 움직임 스크립트
 document.getElementById("menu").onclick = function () {
   document.getElementsByTagName("span")[0].classList.toggle("bar1");

@@ -23,55 +23,6 @@ body {
   overflow-x: hidden;
 }
 
-/* intro */
-.intro {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  background: #21312c;
-  z-index: 999;
-}
-.intro .logo {
-  position: relative;
-  animation: pic 5s forwards;
-}
-.intro .text {
-  position: relative;
-  font-family: Agatho;
-  color: #cdaf82;
-  font-size: 20px;
-  margin-top: 10px;
-  animation: text 2s forwards;
-}
-
-@keyframes pic {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes text {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(10px);
-  }
-}
-
 /* beige 배경색 */
 .beige {
   position: static;
@@ -298,15 +249,6 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   text-align: center;
   letter-spacing: 2px;
   z-index: 1;
-  animation: slogan 1s forwards 3s;
-}
-@keyframes slogan {
-  0% {
-    top: 60%;
-  }
-  100% {
-    top: 50%;
-  }
 }
 
 /* control */
