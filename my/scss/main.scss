@@ -319,7 +319,7 @@ header {
         &:nth-child(odd):after {
           position: absolute;
           top: 0;
-          right: 0%;
+          right: 0;
           content: "";
           width: 1px;
           height: 88%;
