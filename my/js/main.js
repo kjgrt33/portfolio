@@ -15,6 +15,21 @@ $(function () {
   });
 });
 
+//popup
+//열기
+$("#popup_view").click(function (e) {
+  e.preventDefault();
+  $("#popup").css({ display: "block" });
+  $("body").css({ overflow: "hidden" });
+});
+
+//닫기
+$("#close").click(function (e) {
+  e.preventDefault();
+  $("#popup").css({ display: "none" });
+  $("body").css({ overflow: "visible" });
+});
+
 // TOP 버튼
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;

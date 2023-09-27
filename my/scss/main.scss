@@ -373,6 +373,93 @@ header {
   }
 }
 
+/* popup */
+#popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 3;
+
+  .pop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 30%;
+    box-sizing: border-box;
+    word-break: keep-all;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    z-index: 4;
+
+    .btn_close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      img {
+        width: 30px;
+      }
+    }
+    .title_box {
+      h5 {
+        font-family: Syne;
+        font-size: 60px;
+        .kor {
+          font-family: Pretendard;
+          font-size: 54px;
+          letter-spacing: -1px;
+        }
+      }
+      p {
+        font-family: RobotoMono;
+        font-size: 16px;
+        margin: 10px 0 30px;
+      }
+    }
+    .pic {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        text-align: center;
+      }
+    }
+    .desc {
+      font-family: Pretendard;
+      text-align: center;
+      color: #474747;
+      font-weight: 200;
+      p:first-child {
+        margin: 30px 0;
+        line-height: 30px;
+      }
+      p:last-child {
+        span a {
+          color: rgb(37, 114, 187);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+#popup:target {
+  display: block;
+}
+
 /* contact me */
 .contact {
   border-bottom: 1px solid #000;
@@ -523,7 +610,7 @@ header {
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
   transform: rotate(-45deg);
-  z-index: 3;
+  z-index: 2;
 }
 .btn_top a:hover {
   background: #000;
@@ -609,6 +696,22 @@ header {
         font-size: 80px;
         &:nth-child(4) {
           top: 67%;
+        }
+      }
+    }
+  }
+
+  /* popup */
+  #popup {
+    .pop {
+      padding: 3% 20%;
+
+      .title_box {
+        h5 {
+          font-size: 50px;
+          .kor {
+            font-size: 44px;
+          }
         }
       }
     }
@@ -856,6 +959,24 @@ header {
     }
   }
 
+  /* popup */
+  #popup {
+    .pop {
+      padding: 3% 14%;
+      .title_box {
+        h5 {
+          font-size: 40px;
+          .kor {
+            font-size: 34px;
+          }
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
   /* contact me */
   .contact {
     h5 {
@@ -940,6 +1061,20 @@ header {
   }
   .services .contents .text .desc {
     margin-left: 20px;
+  }
+
+  /* popup */
+  #popup {
+    .pop {
+      .title_box {
+        h5 {
+          font-size: 30px;
+          .kor {
+            font-size: 26px;
+          }
+        }
+      }
+    }
   }
 
   /* footer */
