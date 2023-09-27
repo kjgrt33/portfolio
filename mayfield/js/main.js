@@ -117,6 +117,19 @@ $(function () {
       tl.play();
     }
   );
+
+  //popup
+  //열기
+  $("#popup_view").click(function (e) {
+    e.preventDefault();
+    $("#popup").css({ display: "block" });
+  });
+
+  //닫기
+  $("#close").click(function (e) {
+    e.preventDefault();
+    $("#popup").css({ display: "none" });
+  });
 });
 
 // MAYFIELD WELLNESS
