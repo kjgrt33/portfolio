@@ -1,62 +1,63 @@
-// submenu 스크립트
-let subMenu = document.querySelectorAll(".submenu");
-let gnb = document.querySelectorAll(".gnb ul li a");
-let lnb = document.querySelectorAll(".lnb");
+$(function () {
+  // submenu 스크립트
 
-gnb.forEach(function (item, keys) {
-  item.onmouseenter = function (e) {
-    let j = Array.from(gnb).indexOf(e.target);
-    function others(item) {
-      return item !== j;
-    }
-    let otherItem = Array.from(subMenu).filter(others);
-    otherItem.forEach(function (item) {
-      item.style.height = "0px";
-      item.style.opacity = "0";
-    });
+  let subMenu = document.querySelectorAll(".submenu");
+  let gnb = document.querySelectorAll(".gnb ul li a");
+  let lnb = document.querySelectorAll(".lnb");
 
-    lnb.forEach(function () {
-      let subht = lnb[j].offsetHeight;
-      console.log("j : " + j);
-      subMenu[j].style.height = subht + "px";
-      subMenu[j].style.opacity = "1";
-      subMenu[j].classList.add("active2");
-    });
+  gnb.forEach(function (item, keys) {
+    item.onmouseenter = function (e) {
+      let j = Array.from(gnb).indexOf(e.target);
+      function others(item) {
+        return item !== j;
+      }
+      let otherItem = Array.from(subMenu).filter(others);
+      otherItem.forEach(function (item) {
+        item.style.height = "0px";
+        item.style.opacity = "0";
+      });
 
-    item.onmouseleave = function () {
+      lnb.forEach(function () {
+        let subht = lnb[j].offsetHeight;
+        console.log("j : " + j);
+        subMenu[j].style.height = subht + "px";
+        subMenu[j].style.opacity = "1";
+        subMenu[j].classList.add("active2");
+      });
+
+      item.onmouseleave = function () {
+        for (let i = 0; i <= 6; i++) {
+          subMenu[i].style.height = 0 + "px";
+          subMenu[j].classList.remove("active2");
+        }
+      };
+    };
+  });
+
+  subMenu.forEach(function (item, keys) {
+    item.onmouseenter = function (e) {
+      let j = Array.from(subMenu).indexOf(e.target);
+      lnb.forEach(function () {
+        let subht = lnb[j].offsetHeight;
+        console.log("subht : " + subht);
+        subMenu[j].style.height = subht + "px";
+        subMenu[j].style.opacity = "1";
+        subMenu[j].classList.add("active2");
+      });
+
+      gnb[j].classList.add("on", "active");
+    };
+
+    item.onmouseleave = function (e) {
       for (let i = 0; i <= 6; i++) {
         subMenu[i].style.height = 0 + "px";
-        subMenu[j].classList.remove("active2");
+        subMenu[i].classList.remove("active2");
       }
+      gnb[keys].classList.remove("on", "active");
     };
-  };
-});
+  });
 
-subMenu.forEach(function (item, keys) {
-  item.onmouseenter = function (e) {
-    let j = Array.from(subMenu).indexOf(e.target);
-    lnb.forEach(function () {
-      let subht = lnb[j].offsetHeight;
-      console.log("subht : " + subht);
-      subMenu[j].style.height = subht + "px";
-      subMenu[j].style.opacity = "1";
-      subMenu[j].classList.add("active2");
-    });
-
-    gnb[j].classList.add("on", "active");
-  };
-
-  item.onmouseleave = function (e) {
-    for (let i = 0; i <= 6; i++) {
-      subMenu[i].style.height = 0 + "px";
-      subMenu[i].classList.remove("active2");
-    }
-    gnb[keys].classList.remove("on", "active");
-  };
-});
-
-// visual
-$(function () {
+  // visual
   const progressLine = $(".autoplay-progress p");
   var swiper1 = new Swiper(".mySwiper1", {
     loop: true,
@@ -152,4 +153,18 @@ $(function () {
       $(this).find("svg").removeClass().addClass("on1");
     }
   );
+
+  //popup
+
+  //열기
+  $("#popup_view").click(function (e) {
+    e.preventDefault();
+    $("#popup").css({ display: "block" });
+  });
+
+  //닫기
+  $("#close").click(function (e) {
+    e.preventDefault();
+    $("#popup").css({ display: "none" });
+  });
 });
