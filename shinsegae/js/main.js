@@ -124,7 +124,7 @@ $(function () {
     },
   });
 
-  // #Shinsegae Brand
+  // Shinsegae Brand
   $(".brand_bottom").find(".content:first").addClass("on");
   var swiperSubNum = $(".mySwiper3").find(".swiper-slide");
   var swiper3 = new Swiper(".mySwiper3", {
@@ -155,7 +155,6 @@ $(function () {
   );
 
   //popup
-
   //열기
   $("#popup_view").click(function (e) {
     e.preventDefault();
