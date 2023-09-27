@@ -353,6 +353,11 @@ header {
               font-family: Syne;
               font-size: 24px;
               font-weight: 200;
+              .kor {
+                font-family: Pretendard;
+                font-size: 22px;
+                letter-spacing: -1px;
+              }
             }
             p {
               font-family: RobotoMono;
@@ -405,7 +410,7 @@ header {
       .pic {
         width: 300px;
         height: 300px;
-        border: 1px solid #191919;
+        //border: 1px solid #191919;
         border-radius: 50%;
         overflow: hidden;
         img {
