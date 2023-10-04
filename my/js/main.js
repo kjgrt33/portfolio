@@ -34,7 +34,7 @@ $("#close").click(function (e) {
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
   console.log(ht);
-  if (ht > 2000) {
+  if (ht > 1000) {
     document.getElementsByClassName("btn_top")[0].style.opacity = "1";
   } else {
     document.getElementsByClassName("btn_top")[0].style.opacity = "0";
