@@ -374,7 +374,7 @@ header {
 }
 
 /* popup */
-#popup {
+.popup {
   display: none;
   position: fixed;
   left: 0;
@@ -434,6 +434,7 @@ header {
         height: 100%;
         object-fit: cover;
         text-align: center;
+        border: 1px solid #ccc;
       }
     }
     .desc {
@@ -445,7 +446,7 @@ header {
         margin: 30px 0;
         line-height: 30px;
       }
-      p:last-child {
+      .blue {
         span a {
           color: rgb(37, 114, 187);
           &:hover {
@@ -456,7 +457,7 @@ header {
     }
   }
 }
-#popup:target {
+.popup:target {
   display: block;
 }
 
@@ -702,7 +703,7 @@ header {
   }
 
   /* popup */
-  #popup {
+  .popup {
     .pop {
       padding: 3% 20%;
 
@@ -960,7 +961,7 @@ header {
   }
 
   /* popup */
-  #popup {
+  .popup {
     .pop {
       padding: 3% 14%;
       .title_box {
@@ -1064,7 +1065,7 @@ header {
   }
 
   /* popup */
-  #popup {
+  .popup {
     .pop {
       .title_box {
         h5 {
