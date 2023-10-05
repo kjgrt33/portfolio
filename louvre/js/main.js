@@ -9,6 +9,7 @@ $("#navi_view").click(function (e) {
 $("#close").click(function (e) {
   e.preventDefault();
   $("#navi").css({ display: "none" });
+  $(".navi2").css({ display: "none" });
 });
 
 //menu1
@@ -36,7 +37,7 @@ $("#menu1").click(function (e) {
   status = !status;
 }); */
 
-//menu2
+//menu3
 //열기 닫기
 /* $("#menu3").click(function (e) {
   e.preventDefault();
@@ -50,10 +51,9 @@ $("#menu1").click(function (e) {
 
 $(".navi2").css({ display: "none" });
 $(".gnb ul li").click(function (e) {
-  e.preventDefault(); // e.preventDefault();는 a링크 클릭시 #으로 안넘어가게 하는 코드. funcion (e) {} -> e를 꼭 넣어줘야함!!!
+  e.preventDefault();
   let i = $(this).index();
   console.log(i);
-  //x if ($(".menu ul li").hasClass("on")) {
   if (
     $(this).find("a").hasClass("on") &&
     $(".navi2").eq(i).css("display") == "block"
@@ -61,12 +61,31 @@ $(".gnb ul li").click(function (e) {
     $(".navi2").stop().slideUp();
     $(".gnb ul li a").removeClass("on");
   } else {
-    //$(".navi2").eq(i).siblings().css({ display: "none" });
     $(".navi2").eq(i).stop().slideDown();
     $(".gnb ul li a").removeClass("on");
     $(".gnb ul li").eq(i).find("a").addClass("on");
   }
 });
+
+/* $(".gnb ul li").click(function (e) {
+  e.preventDefault();
+  let i = $(this).index();
+  console.log(i);
+  if (
+    $(this).find("a").hasClass("on") &&
+    $(".navi2").eq(i).css("display") == "block"
+  ) {
+    $(".navi2").animate({ left: "-100%" }, 1000);
+
+    $(".gnb ul li a").removeClass("on");
+  } else {
+    $(".navi2").animate({ left: "680px" }, 1000, function () {
+      $(".navi2").css({ zIndex: "10" });
+    });
+    $(".gnb ul li a").removeClass("on");
+    $(".gnb ul li").eq(i).find("a").addClass("on");
+  }
+}); */
 
 // visual
 const video = document.getElementById("myVideo");
