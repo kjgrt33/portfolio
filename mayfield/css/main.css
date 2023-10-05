@@ -250,13 +250,15 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   background: url(../images/visual04.jpg) center center no-repeat;
 }
 #mySwiper1 {
-  position: static;
+  /* position: static; */
+  height: 950px;
+  /* border: 1px solid #000; */
 }
 #btn_next {
   width: 26px;
   height: 6px;
   right: 1619px;
-  top: 97%;
+  top: 99%;
   background: url(../images/slide_right_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
@@ -265,7 +267,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   width: 26px;
   height: 6px;
   left: 150px;
-  top: 97%;
+  top: 99%;
   background: url(../images/slide_left_arrow.png) center center;
   opacity: 0.5;
   z-index: 3;
@@ -280,7 +282,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 }
 #page {
   left: 196px;
-  bottom: 38px;
+  bottom: 20px;
   width: 34px;
   z-index: 3;
   font-family: "Montserrat", sans-serif;
@@ -317,6 +319,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 }
 .control {
   position: relative; /* reservation이 위에있어서 컨트롤 버튼이 hover가 안되서 포지션값 주고 z-index로 올려줌 */
+  top: -65px;
   width: 40%; /* 아래 구조를 오른쪽으로 보내기위해 전체 100%에서 해당 control의 width 40%만큼중에 오른쪽으로 보내기 위해 flex주고 end로 보냄  */
   display: flex;
   justify-content: flex-end;
@@ -341,7 +344,7 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
   display: block;
   content: url(../images/stop.svg);
   position: absolute;
-  top: -16px;
+  top: -20px;
   left: -10px;
   width: 7px;
   height: 11px;
@@ -391,15 +394,16 @@ nav .nav_inner > ul > li > .sub_menu > li > .ssub_menu li:last-child a {
 
 /* reservation */
 .reser_con {
-  width: 100%;
-  position: relative; /* 구조상 아래라 위로 보내야해서 포지션값 주고 top으로 올림 */
-  top: -150px;
+  width: 80%;
+  position: absolute; /* 구조상 아래라 위로 보내야해서 포지션값 주고 top으로 올림 */
+  bottom: -20px;
+  right: 0;
   display: flex; /* 아래 구조를 오른쪽으로 보내기위해 전체 100%에서 해당 reservation의 width 60%만큼중에 오른쪽으로 보내기 위해 flex주고 end로 보냄  */
   justify-content: flex-end;
   z-index: 1;
 }
 .reservation {
-  width: 60%;
+  width: 80%;
   height: 130px;
   background: #fff;
 }
