@@ -1,1 +1,8 @@
 * 최종 작업완료되면 my에 반영하고 서버에도 반영필요
+
+깃허브 포폴주소
+https://kjgrt33.github.io/
+
+도메인 호스팅(3개월마다 연장해야함)
+https://www.dothome.co.kr/
+kjgrt33.dothome.co.kr
