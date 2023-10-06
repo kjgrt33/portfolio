@@ -70,7 +70,7 @@ $(function () {
     value.onscroll = function () {
       let ht = value.scrollTop;
       console.log(ht);
-      if (ht > 1000) {
+      if (ht > 300) {
         document.querySelector(".btn_top1").style.opacity = "1";
       } else {
         document.querySelector(".btn_top1").style.opacity = "0";
