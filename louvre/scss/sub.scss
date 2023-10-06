@@ -1,0 +1,79 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../webfonts/Montserrat-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../webfonts/Roboto-Regular.woff) format("woff");
+}
+
+/* snb */
+.snb {
+  height: 56px;
+  background: #fff;
+  font-family: Roboto;
+  font-size: 13px;
+
+  ul {
+    height: 100%;
+    line-height: 56px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    li {
+      margin-right: 7px;
+      > a {
+        display: inline-block;
+        > svg {
+          font: 400 14px/1.57 Roboto, Open Sans, Arial, Helvetica, sans-serif;
+          overflow-wrap: break-word;
+          list-style: none;
+          color: #333;
+          font-size: 24px;
+          box-sizing: border-box;
+          width: 1em;
+          pointer-events: none;
+          fill: currentColor;
+          display: block;
+          height: 1em;
+          transition: box-shadow 0.15s;
+          border-radius: 2px;
+          box-shadow: inset 0 0 0 1px #0000;
+          position: relative;
+          top: 6px;
+        }
+      }
+      svg {
+        font: 400 14px/1.57 Roboto, Open Sans, Arial, Helvetica, sans-serif;
+        overflow-wrap: break-word;
+        color: #000;
+        list-style: none;
+        box-sizing: border-box;
+        width: 1em;
+        pointer-events: none;
+        fill: currentColor;
+        display: block;
+        font-size: 16px;
+        height: 1em;
+        align-self: center;
+        vertical-align: top;
+      }
+      &:nth-child(5) {
+        color: #707070;
+      }
+    }
+  }
+}
