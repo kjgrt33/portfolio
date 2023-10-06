@@ -59,6 +59,26 @@ $(function () {
   };
   $(".btn_top").click(function (e) {
     e.preventDefault();
-    $("html,body").animate({ scrollTop: "0" }, 1000);
+    $("html,body").animate({ scrollTop: "0" }, 800);
+  });
+
+  // popup TOP 버튼
+  let pop_top = document.querySelectorAll(".pop");
+  let btn_top1 = document.querySelector(".btn_top1");
+  pop_top.forEach(function (value, index) {
+    console.log(index);
+    value.onscroll = function () {
+      let ht = value.scrollTop;
+      console.log(ht);
+      if (ht > 1000) {
+        document.querySelector(".btn_top1").style.opacity = "1";
+      } else {
+        document.querySelector(".btn_top1").style.opacity = "0";
+      }
+    };
+  });
+  $(".btn_top1").click(function (e) {
+    e.preventDefault();
+    $(".pop").animate({ scrollTop: "0" }, 500);
   });
 });

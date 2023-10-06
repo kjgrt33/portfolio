@@ -592,7 +592,15 @@ header {
   bottom: 130px;
   opacity: 0;
 }
-.btn_top a {
+.btn_top1 {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0;
+  z-index: 5;
+}
+.btn_top a,
+.btn_top1 a {
   position: relative;
   display: inline-block;
   width: 40px;
@@ -600,7 +608,8 @@ header {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
 }
-.btn_top a::before {
+.btn_top a::before,
+.btn_top1 a::before {
   position: absolute;
   left: 40%;
   top: 40%;
@@ -613,7 +622,8 @@ header {
   transform: rotate(-45deg);
   z-index: 2;
 }
-.btn_top a:hover {
+.btn_top a:hover,
+.btn_top1 a:hover {
   background: #000;
 }
 
