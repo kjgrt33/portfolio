@@ -77,3 +77,143 @@ a {
     }
   }
 }
+
+/* visual */
+.sub_visual {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background: linear-gradient(to top, #080808d7 0%, transparent 100%);
+  .text {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    color: #fff;
+    padding: 1% 6%;
+    box-sizing: border-box;
+    h4 {
+      font-family: Montserrat;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+    p:nth-of-type(1) {
+      width: 40%;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px;
+      font-weight: 200;
+      margin: 20px 0 40px;
+      line-height: 40px;
+    }
+  }
+  .img {
+    width: 100%;
+    height: 420px;
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+}
+
+/* contents */
+.sub_con {
+  background: #1a1a1a;
+  width: 100%;
+  .con {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 100px 0;
+    box-sizing: border-box;
+    ul {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      li {
+        flex: 0 0 30%;
+        padding-top: 100px;
+        a {
+          position: relative;
+          color: #fff;
+          .img {
+            width: 620px;
+            height: 830px;
+            border-radius: 5px;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: 0.4s;
+              filter: grayscale(1);
+            }
+          }
+          .txt {
+            position: absolute;
+            bottom: 40px;
+            text-align: center;
+            padding: 0 30px;
+            h3 {
+              font-family: "Cinzel", serif;
+              text-transform: uppercase;
+              font-size: 40px;
+              font-weight: 200;
+              line-height: 45px;
+            }
+            p {
+              font-family: Roboto;
+              font-size: 18px;
+              margin-top: 10px;
+            }
+          }
+          &:hover img {
+            filter: grayscale(0);
+          }
+        }
+      }
+      li:first-child {
+        padding-top: 70px;
+      }
+    }
+  }
+}
+
+/* 반응형 */
+@media screen and (max-width: 1748px) {
+  /* visual */
+  .sub_visual {
+    height: 320px;
+    .img {
+      height: 320px;
+    }
+  }
+}
+
+@media screen and (max-width: 1012px) {
+  /* visual */
+  .sub_visual {
+    .text {
+      p:nth-of-type(1) {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 819px) {
+  /* visual */
+  .sub_visual {
+    .text {
+      p:nth-of-type(1) {
+        width: 100%;
+      }
+    }
+  }
+}
