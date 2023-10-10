@@ -55,8 +55,8 @@ subMenu.forEach(function (item, keys) {
   };
 });
 
-// TOP 버튼
-window.onscroll = function () {
+// TOP 버튼(자바스크립트 버전)
+/* window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
   console.log(ht);
   if (ht > 50) {
@@ -67,4 +67,21 @@ window.onscroll = function () {
 };
 document.getElementsByClassName("btn_top")[0].onclick = function () {
   document.documentElement.scrollTop = "0";
-};
+}; */
+
+$(function () {
+  // TOP 버튼
+  window.onscroll = function () {
+    let ht = document.documentElement.scrollTop;
+    console.log(ht);
+    if (ht > 50) {
+      document.getElementsByClassName("btn_top")[0].style.opacity = "1";
+    } else {
+      document.getElementsByClassName("btn_top")[0].style.opacity = "0";
+    }
+  };
+  $(".btn_top").click(function (e) {
+    e.preventDefault();
+    $("html,body").animate({ scrollTop: "0" }, 800);
+  });
+});
