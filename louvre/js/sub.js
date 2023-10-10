@@ -39,6 +39,18 @@ $(".gnb ul li").click(function (e) {
   }
 });
 
+//nav 스크롤
+/* let wd = $(window).width();
+if (wd <= 705) {
+  $("html, body").css("overflow", "hidden");
+}
+$(window).resize(function () {
+  let wd = $(window).width();
+  if (wd <= 705) {
+    $("html, body").css("overflow", "hidden");
+  }
+}); */
+
 // TOP 버튼
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;

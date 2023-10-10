@@ -2261,6 +2261,12 @@ footer {
   .touch {
     background: #000000b3;
   }
+
+  /* [공통] btn_top 상단 바로가기 버튼 */
+  .btn_top a {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 739px) {

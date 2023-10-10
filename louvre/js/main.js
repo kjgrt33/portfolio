@@ -40,7 +40,7 @@ $(".gnb ul li").click(function (e) {
 });
 
 //nav 스크롤
-let wd = $(window).width();
+/* let wd = $(window).width();
 if (wd <= 705) {
   $("html, body").css("overflow", "hidden");
 }
@@ -49,7 +49,7 @@ $(window).resize(function () {
   if (wd <= 705) {
     $("html, body").css("overflow", "hidden");
   }
-});
+}); */
 
 // visual
 const video = document.getElementById("myVideo");
