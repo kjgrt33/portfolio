@@ -152,12 +152,12 @@ var swiper = new Swiper(".mySwiper3", {
   },
 });
 
-// header, TOP 버튼
+// header, TOP 버튼(자바스크립트)
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
   console.log(ht);
   if (ht > 50) {
-    document.getElementsByClassName("btn_top")[0].style.opacity = "1";
+    //document.getElementsByClassName("btn_top")[0].style.opacity = "1";
 
     document.getElementsByTagName("header")[0].style.background = "#fff";
     document.getElementsByTagName("header")[0].classList.add("header_active");
@@ -178,7 +178,7 @@ window.onscroll = function () {
         [i].classList.add("menu_active");
     }
   } else {
-    document.getElementsByClassName("btn_top")[0].style.opacity = "0";
+    //document.getElementsByClassName("btn_top")[0].style.opacity = "0";
 
     document.getElementsByTagName("header")[0].style.background = "transparent";
     document
@@ -201,6 +201,23 @@ window.onscroll = function () {
     }
   }
 };
-document.getElementsByClassName("btn_top")[0].onclick = function () {
+/* document.getElementsByClassName("btn_top")[0].onclick = function () {
   document.documentElement.scrollTop = "0";
-};
+}; */
+
+$(function () {
+  // TOP 버튼
+  window.onscroll = function () {
+    let ht = document.documentElement.scrollTop;
+    console.log(ht);
+    if (ht > 50) {
+      document.getElementsByClassName("btn_top")[0].style.opacity = "1";
+    } else {
+      document.getElementsByClassName("btn_top")[0].style.opacity = "0";
+    }
+  };
+  $(".btn_top").click(function (e) {
+    e.preventDefault();
+    $("html,body").animate({ scrollTop: "0" }, 800);
+  });
+});
