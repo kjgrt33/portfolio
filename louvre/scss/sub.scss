@@ -262,7 +262,20 @@ a {
             padding-top: 0;
           }
           li:last-child {
-            margin-bottom: 0;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 502px) {
+    /* contents */
+    .sub_con {
+      .con {
+        ul {
+          li {
+            margin-bottom: 30px;
           }
         }
       }
