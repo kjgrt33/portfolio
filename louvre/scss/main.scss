@@ -197,7 +197,7 @@ header {
 
 /* nav */
 #navi {
-  display: none;
+  /* display: none; */
   position: fixed;
   left: 0;
   top: 0;
@@ -515,6 +515,10 @@ header {
       }
     }
   }
+}
+
+.active {
+  display: none;
 }
 
 #navi:target {
@@ -2034,6 +2038,14 @@ footer {
     span {
       font-size: 15px;
     }
+  }
+
+  /* nav */
+  #navi .pop .middle1 .gnb ul li a svg {
+    transform: rotate(90deg);
+  }
+  .navi2 {
+    display: none !important;
   }
 }
 

@@ -1,15 +1,21 @@
 //nav
 //열기
+$(".pop_Menu").addClass("active");
 $("#navi_view").click(function (e) {
   e.preventDefault();
-  $("#navi").css({ display: "block" });
+  $("#navi").removeClass("active");
   $(".navi2").css({ display: "block" });
+  if ($("#navi").hasClass("active")) {
+    $("html, body").css("overflow", "visible");
+  } else {
+    $("html, body").css("overflow", "hidden");
+  }
 });
 
 //닫기
 $("#close").click(function (e) {
   e.preventDefault();
-  $("#navi").css({ display: "none" });
+  $("#navi").addClass("active");
   $(".navi2").css({ left: "-100%" });
   $("html, body").css("overflow", "visible");
 });
@@ -38,18 +44,6 @@ $(".gnb ul li").click(function (e) {
     $(".navi2").eq(i).css({ zIndex: "1" }).animate({ left: "0" }, 300);
   }
 });
-
-//nav 스크롤
-/* let wd = $(window).width();
-if (wd <= 705) {
-  $("html, body").css("overflow", "hidden");
-}
-$(window).resize(function () {
-  let wd = $(window).width();
-  if (wd <= 705) {
-    $("html, body").css("overflow", "hidden");
-  }
-}); */
 
 // TOP 버튼
 window.onscroll = function () {
