@@ -87,7 +87,6 @@ var swiper = new Swiper(".mySwiper2", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    //clickable: false,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -115,7 +114,6 @@ $(".b_list li").hover(
 var swiper = new Swiper(".mySwiper3", {
   slidesPerView: "auto",
   spaceBetween: 20,
-  //centeredSlides: true, 이거 잠시 주석
   slidesPerGroup: 1,
   slidesPerGroupAuto: true,
   slidesOffsetBefore: 100,
@@ -144,8 +142,8 @@ document.getElementsByClassName("btn_top")[0].onclick = function () {
   document.documentElement.scrollTop = "0";
 }; */
 
+// TOP 버튼
 $(function () {
-  // TOP 버튼
   window.onscroll = function () {
     let ht = document.documentElement.scrollTop;
     console.log(ht);
