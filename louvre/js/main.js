@@ -104,7 +104,7 @@ $(".b_list li").hover(
 
     $("#b_pic img")
       .attr("src", img_src.replace(img_src.substr(-5, 1), i + 2)) // index는 0부터 시작이므로 +2로
-      .attr("alt", "banner" + i);
+      .attr("alt", "banner" + (i + 2));
   },
   function () {
     $("#b_pic img").attr("src", "images/banner1.jpg").attr("alt", "banner1");
