@@ -69,8 +69,8 @@ document.getElementsByClassName("btn_top")[0].onclick = function () {
   document.documentElement.scrollTop = "0";
 }; */
 
+// TOP 버튼
 $(function () {
-  // TOP 버튼
   window.onscroll = function () {
     let ht = document.documentElement.scrollTop;
     console.log(ht);
