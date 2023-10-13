@@ -7,18 +7,9 @@ $(function () {
       3000,
       function () {
         $(".intro").css("top", "-100%");
-        /*  $(".intro")
-          .css("opacity", "1")
-          .animate({ opacity: 0 }, 1000, function () {
-            $(".intro").css("display", "none");
-          }); */
         $("#wrap")
           .css({ top: "0", opacity: "0" })
           .animate({ opacity: 1 }, 1000);
-        /* .css("opacity", "0")
-          .animate({ opacity: 1 }, 500, function () {
-            $("#wrap").css("display", "block");
-          }); */
       }
     );
 });
